@@ -4,6 +4,7 @@
 import { onScroll } from '@/resources/mixins'
 
 export default {
+  mixins: [onScroll],
   props: {
     props: {
       type: [Object, Array]
@@ -17,8 +18,7 @@ export default {
         threshold: [0.4]
       }
     }
-  },
-  mixins: [onScroll],
+  }
   // methods: {
   //   onWaypoint ({ going, direction, el }) {
   //     console.log()
