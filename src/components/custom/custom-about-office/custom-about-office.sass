@@ -1,0 +1,81 @@
+.custom-about-office
+  @include phone-lg
+    padding: 4rem 0
+  padding: 6rem 0 4rem
+
+  &__title
+    padding-bottom: 4rem
+    text-align: center
+    color: $c1
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-12
+
+  &__slider
+    @include phone-lg
+      min-height: 20rem
+    position: relative
+    min-height: 30rem
+
+  &__slide
+    @extend .image--centered
+    @include phone-lg
+      top: 0
+      transform: translateX(-50%)
+      width: 100%
+      height: calc(100% - 7.5rem)
+    transition: opacity .25s ease-in
+    opacity: 0
+    width: calc(100% * (8 / 12))
+
+    &--active
+      opacity: 1
+
+  &__prev,
+  &__next
+    @extend h1
+    @extend .image--centered
+    @include phone-lg
+      top: unset
+      bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    transform: translateY(-50%)
+    transition: border-color .25s ease-in
+    border: 2px solid $c3
+    border-radius: 50%
+    cursor: pointer
+    padding-bottom: 0
+    width: 4rem
+    height: 4rem
+    text-align: center
+    line-height: 1
+
+    &:hover
+      border-color: $c1
+
+  &__prev
+    @include phone-lg
+      left: 0
+    left: 2rem
+
+  &__next
+    @include phone-lg
+      right: 0
+    right: 2rem
+    left: auto
+
+  &__icon
+    transform: translate(.15rem, -.15rem)
+    width: 2.5rem
+    height: 2.5rem
+    svg
+      width: 100%
+      height: 100%
+
+    &--flip
+      transform: rotate(180deg) translate(.15rem, -.15rem)

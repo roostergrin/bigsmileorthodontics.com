@@ -1,6 +1,11 @@
 <template lang="pug" src="./about.pug"></template>
 
 <script>
+import CustomAboutApart from 'components/custom/custom-about-apart/custom-about-apart'
+import CustomAboutDoctor from 'components/custom/custom-about-doctor/custom-about-doctor'
+import CustomAboutOffice from 'components/custom/custom-about-office/custom-about-office'
+import CustomAboutTeam from 'components/custom/custom-about-team/custom-about-team'
+
 export default {
   name: 'About',
   computed: {
@@ -9,6 +14,10 @@ export default {
     }
   },
   components: {
+    CustomAboutApart,
+    CustomAboutDoctor,
+    CustomAboutOffice,
+    CustomAboutTeam
   }
 }
 </script>

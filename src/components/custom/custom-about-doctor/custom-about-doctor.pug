@@ -1,0 +1,15 @@
+.custom-about-doctor
+  BaseLazyBg.custom-about-doctor__background(:src='content.background')
+  .custom-about-doctor__overlay
+  .custom-about-doctor__container
+    .custom-about-doctor__col-1
+      h1.custom-about-doctor__title(v-html='content.title')
+      .custom-about-doctor__body(v-html='content.body')
+    .custom-about-doctor__col-2
+      BaseLazyImg.custom-about-doctor__image-top(:src='content.image_top')
+      BaseLazyImg.custom-about-doctor__image-bottom(:src='content.image_bottom')
+  .custom-about-doctor__banner
+    BaseLazyImg.custom-about-doctor__banner-image(
+      v-for='(image, i) in content.banner'
+      :key='"image-" + i'
+      :src='image.logo')

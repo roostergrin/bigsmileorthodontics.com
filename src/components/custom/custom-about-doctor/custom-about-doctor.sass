@@ -1,0 +1,79 @@
+.custom-about-doctor
+  @include tablet-lg
+    padding-top: 7.5rem
+  position: relative
+  padding-top: 13.5rem
+  padding-bottom: 4rem
+
+  &__background
+    position: absolute
+    top: 0
+    left: 0
+    background: center bottom / contain no-repeat
+    width: 100%
+    height: 100%
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    background: linear-gradient(to bottom, rgb(228, 228, 228) 45%, rgba(228, 228, 228, .9) 55%)
+    width: 100%
+    height: 100%
+
+  &__container
+    @extend .container
+    @include tablet-lg
+      flex-direction: column-reverse
+
+
+  &__col-1
+    @extend .col-6
+    @include tablet-lg
+      width: 100%
+
+  &__col-2
+    @extend .col-5
+    @extend .col-1--offset
+    @include tablet-lg
+      display: flex
+      justify-content: space-between
+      margin-left: 0
+      width: 100%
+
+  &__image-top,
+  &__image-bottom
+    background: center / cover no-repeat
+
+  &__image-top
+    @include tablet-lg
+      width: 47.5%
+      height: 20rem
+    @include phone-lg
+      width: 100%
+    margin-bottom: 2rem
+    height: calc(60% - 2rem)
+
+  &__image-bottom
+    @include tablet-lg
+      width: 47.5%
+      height: 20rem
+    @include phone-lg
+      display: none
+    height: 40%
+
+  &__banner
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    padding: 0 1rem
+    padding-top: 2rem
+
+  &__banner-image
+    @include tablet-lg
+      width: calc(100% / 3)
+    margin-top: 2rem
+    background: center / contain no-repeat
+    width: 18.5%
+    height: 6rem

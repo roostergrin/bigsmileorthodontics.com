@@ -1,0 +1,129 @@
+.custom-about-team
+  position: relative
+  background: $b1
+  padding: 3rem 0 5rem
+  color: $white
+
+  &__upper
+    margin: 0 auto 3rem
+    padding: 0 2rem
+    max-width: rem-calc(808)
+
+  &__title
+    @extend h1
+    text-align: center
+    font-weight: bold
+
+  &__subtitle
+    text-align: center
+
+  &__container
+    @include phone
+      padding: 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 auto
+    padding: 0 2rem
+    max-width: $screen-desktop
+
+    &--half
+      max-width: $screen-phone-lg
+
+    &--third
+      max-width: $screen-tablet
+
+    &--quarter
+      max-width: 1339px
+
+    @media screen and (max-width: 600px)
+      flex-direction: column
+
+  &__tile
+    @include desktop-lg
+      height: rem-calc(360)
+    position: relative
+    transition: opacity 1s ease-in
+    opacity: 0
+    margin-top: 1rem
+    cursor: pointer
+    padding: 0 rem-calc(12)
+    height: rem-calc(330)
+
+    .custom-about-team__container--half &
+      width: 50%
+
+    .custom-about-team__container--third &
+      @include tablet
+        width: 50%
+      width: 33.33%
+
+    .custom-about-team__container--quarter &
+      @include tablet-lg
+        width: 33.33%
+      @include tablet
+        width: 50%
+      width: 25%
+
+    @media screen and (max-width: 600px)
+      margin: 1rem auto 0
+      width: 100% !important
+      max-width: 350px
+
+    &:hover
+      .custom-about-team__image
+        transform: matrix(1.05, 0, 0, 1.05, 0, 0)
+
+      .custom-about-team__tile-container
+        background: rgba($c1, .75)
+        height: 70%
+
+      .custom-about-team__bio
+        transform: translateY(0)
+        opacity: 1
+        font-size: 15px
+
+    .custom-about-team__container--active &
+      opacity: 1
+
+    &-container
+      position: absolute
+      bottom: 1rem
+      left: 0
+      transition: height .3s cubic-bezier(.39, .575, .28, .995), background .3s ease-in
+      margin-left: rem-calc(12)
+      background: rgba($c1, .75)
+      padding: rem-calc(6) 1rem 0 1.5rem
+      width: 85%
+      height: rem-calc(80)
+      overflow: hidden
+
+      @media screen and (max-width: 1176px)
+        width: 92%
+
+  &__name
+    margin-bottom: rem-calc(6)
+    color: $white
+    font-size: 18px
+
+  &__position
+    text-transform: uppercase
+    color: $white
+    font-size: 14px
+
+  &__bio
+    transform: translateY(3rem)
+    transition: transform .3s cubic-bezier(.39, .575, .28, .995) .15s, opacity .3s ease-in .15s
+    opacity: 0
+    margin-top: rem-calc(12)
+    color: $white
+
+  &__image-container
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+  &__image
+    @extend .image--bg
+    transition: transform .7s cubic-bezier(.39, .575, .28, .995)
