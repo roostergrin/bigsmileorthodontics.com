@@ -12,6 +12,11 @@ export default {
     scrolling: {
       type: Boolean
     }
+  },
+  computed: {
+    contact () {
+      return this.$store.state.app['contact-information']
+    }
   }
 }
 </script>

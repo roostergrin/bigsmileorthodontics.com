@@ -1,0 +1,20 @@
+.custom-home-welcome
+  .custom-home-welcome__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    .custom-home-welcome__column
+      h1.custom-home-welcome__title(v-html='props.title', :class="{ 'custom-home-welcome__title--active': active }")
+      .custom-home-welcome__body(v-html='props.body')
+      .custom-home-welcome__example
+        .custom-home-welcome__column--one
+          .custom-home-welcome__group
+            BaseIcon.custom-home-welcome__icon(:name='props.left.icon')
+            h4.custom-home-welcome__subtitle(v-html='props.left.subtitle')
+        .custom-home-welcome__column--two
+          .custom-home-welcome__group
+            BaseIcon.custom-home-welcome__icon(name='plus')
+            h4.custom-home-welcome__and &
+        .custom-home-welcome__column--three
+          .custom-home-welcome__group
+            BaseIcon.custom-home-welcome__icon(:name='props.right.icon')
+            h4.custom-home-welcome__subtitle(v-html='props.right.subtitle')
+          
+    

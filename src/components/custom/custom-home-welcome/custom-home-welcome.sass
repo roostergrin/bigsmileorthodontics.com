@@ -1,0 +1,69 @@
+.custom-home-welcome
+  @extend .padding-basic
+  background-color: $c1
+  color: $white
+
+  &__container
+    @extend .container
+
+  &__column
+    @extend .col-2--offset
+    @extend .col-8
+
+    &--one,
+    &--two,
+    &--three
+      @include phone-lg
+        padding: 0
+      @include phone-land-lg
+        width: 30%
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 0 1rem
+      width: 45%
+
+    &--one
+      align-items: flex-end
+
+    &--two
+      width: 15%
+
+    &--three
+      align-items: flex-start
+
+  &__group
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__title
+    @include title-basic-fade-up
+    text-align: center
+
+  &__example
+    @include phone-lg
+      padding-top: 2rem
+    display: flex
+    justify-content: center
+    padding-top: 4rem
+
+  &__icon
+    @include phone
+      width: 3rem
+      height: calc(3rem * 1)
+    margin-bottom: 1rem
+    width: 4rem
+    height: calc(4rem * 1)
+    fill: $white
+
+  &__subtitle
+    @include phone-lg
+      font-size: rem-calc(20px)
+    @include phone
+      font-size: rem-calc(16px)
+    text-align: center
+    text-transform: uppercase
+
+  &__and
+    color: $c3

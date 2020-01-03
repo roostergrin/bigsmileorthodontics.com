@@ -1,0 +1,23 @@
+.custom-home-testimonials
+  .custom-home-testimonials__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    .custom-home-testimonials__column--left
+      h1.custom-home-testimonials__title(v-html='props.title', :class="{ 'custom-home-testimonials__title--active': active }")
+      BaseIcon.custom-home-testimonials__quotes(name='quote')
+      .custom-home-testimonials__testimonial-container
+        .custom-home-testimonials__chevron--left(@click='prevSlide')
+          BaseIcon.custom-home-testimonials__chevron(name='chevron')
+        .custom-home-testimonials__chevron--right(@click='nextSlide')
+          BaseIcon.custom-home-testimonials__chevron(name='chevron' )
+        .custom-home-testimonials__testimonials
+          .custom-home-testimonials__testimonial(v-for='(testimonial, i) in props.testimonials',
+            :key='"testimonial-" + i', :class="{ 'custom-home-testimonials__testimonial--active': show === i }")
+            .custom-home-testimonials__body(v-html='testimonial.body')
+            br
+            h5.custom-home-testimonials__name(v-html='testimonial.name')
+      .custom-home-testimonials__nav-container
+        .custom-home-testimonials__nav(v-for='(nav, i) in props.testimonials',
+          :key='"nav-" + i' @click='setSlide(i)')
+          .custom-home-testimonials__circle(:class="{ 'custom-home-testimonials__circle--active': show === i }")
+    .custom-home-testimonials__column--right
+      h4.custom-home-testimonials__subtitle(v-html='props.subtitle')
+  BaseLazyBg.custom-home-testimonials__background(:src='props.background')

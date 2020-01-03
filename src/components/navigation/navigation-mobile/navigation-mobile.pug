@@ -1,0 +1,23 @@
+.navigation-mobile
+  .navigation-mobile__container
+    router-link.navigation-mobile__logo-container(to='/')
+      BaseIcon.navigation-mobile__logo(name='logo--full')
+    .navigation-mobile__hamburger(@click='toggleMenu', :class="{ 'navigation-mobile__hamburger--active': menu }")
+        .navigation-mobile__hamburger--text Menu
+        span
+        span
+          
+  .navigation-mobile__overlay(@click='toggleMenu', :class="{ 'navigation-mobile__overlay--open': menu }")
+  .navigation-mobile__drawer(:class="{'navigation-mobile__drawer--open': menu }")
+    .navigation-mobile__container--drawer
+      span.navigation-mobile__span(v-for='link in links')
+        router-link.navigation-mobile__link(@click.native='toggleMenu', :to='link.path', v-html='link.name')
+      .navigation-mobile__content
+        a.navigation-mobile__phone.navigation-text--buttons(:href='contact.phone_link')
+          BaseIcon.navigation-mobile__phone-icon(name='phone')
+          .navigation-mobile__phone-text(v-html='contact.phone')
+        .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
+        .navigation-mobile__buttons
+          router-link.navigation-mobile__button--one(v-html='contact.navigation.button_one', :to='contact.navigation.button_one_link')
+          router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+    BaseIcon.navigation-mobile__favicon(name='favicon', :class="{ 'navigation-mobile__favicon--open': menu }")

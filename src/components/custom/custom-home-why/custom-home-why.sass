@@ -1,0 +1,88 @@
+.custom-home-why
+  @extend .padding-basic
+  position: relative
+  background-color: $c5
+  overflow: hidden
+
+
+  &__container
+    @extend .container--large
+    @include desktop-lg
+      max-width: none
+    @include tablet-lg
+      flex-direction: row
+
+  &__column
+
+    &--one
+      @include tablet-lg
+        padding-right: 0
+        width: 100%
+      display: flex
+      position: relative
+      align-items: center
+      padding-right: 2rem
+      width: 21%
+
+    &--two
+      @include tablet-lg
+        margin-left: 10%
+        width: 80%
+      @include phone-lg
+        margin-left: 0
+        width: 100%
+      width: 37.5%
+
+    &--three
+      @include tablet-lg
+        margin-left: 10%
+        width: 80%
+      @include phone-lg
+        margin-left: 0
+        width: 100%
+      margin-left: 4%
+      width: 37.5%
+
+  &__background
+    @include desktop-lg
+      width: 400%
+      height: 400%
+    @include tablet-lg
+      bottom: 1.5rem
+      left: 50%
+      transform: translateX(-50%)
+      width: 180%
+      height: 180%
+    @include phone-lg
+      width: 300%
+      height: 300%
+    @include phone
+      width: 500%
+      height: 500%
+    position: absolute
+    right: 5%
+    z-index: 1
+    border-radius: 50%
+    background-color: $c6
+    width: 200%
+    height: 200%
+
+  &__title
+    @include title-basic-fade-up
+    @include tablet-lg
+      padding-bottom: 3rem
+      width: 100%
+      text-align: center
+    position: relative
+    z-index: 1
+    color: $white
+
+  &__subtitle
+    text-align: center
+    text-transform: uppercase
+    color: $c1
+    font-weight: 600
+
+  &__body
+    padding-bottom: 2rem
+    text-align: center

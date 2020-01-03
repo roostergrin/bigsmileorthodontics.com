@@ -1,0 +1,10 @@
+.custom-home-banner
+  .custom-home-banner__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    .custom-home-banner__column--right
+      h1.custom-home-banner__title(v-html='props.title', :class="{ 'custom-home-banner__title--active': active }")
+      .custom-home-banner__button-container
+        router-link.custom-home-banner__button(v-for='(button, i) in props.buttons',
+          :key='"button-" + i', :to='button.button_link')
+          .custom-home-banner__button-title(v-html='button.button')
+          BaseIcon.custom-home-banner__icon(name='arrow')
+  BaseLazyBg.custom-home-banner__image(:src='props.image')

@@ -1,0 +1,61 @@
+.custom-home-banner
+  @extend .padding-basic
+  @include tablet-lg
+    background-color: $c9
+  position: relative
+
+  &__container
+    @extend .container--large
+
+  &__column
+
+    &--right
+      @extend .col-5--offset
+      @extend .col-7
+      @include desktop-lg
+        min-height: 25rem
+      @include tablet-lg
+        margin-left: 0
+        width: 100%
+        min-height: auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      min-height: 20rem
+
+  &__title
+    @include title-basic-fade-up
+    margin-bottom: 2rem
+    width: 100%
+    text-transform: none
+    color: $white
+
+  &__button-container
+    display: flex
+    flex-direction: column
+
+  &__button
+    @include button-basic--fill-slide($c3, $c3, $white, $c3)
+    display: inline-flex
+    z-index: 0
+
+    &:first-child
+      margin-bottom: 2rem
+
+  &__button-title
+    position: relative
+    z-index: 2
+    padding-top: .25rem
+
+  &__icon
+    margin-left: 1rem
+    width: 5rem
+    height: calc(5rem * .35)
+
+  &__image
+    @extend .image--bg
+    @include tablet-lg
+      opacity: 0
+    z-index: -1
+    background-position: left

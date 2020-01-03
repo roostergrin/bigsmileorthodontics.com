@@ -1,3 +1,15 @@
 .navigation-desktop
-  span(v-for='link in links')
-    router-link(:to='link.path', v-html='link.name')
+  .navigation-desktop__container
+    router-link.navigation-desktop__logo-container(to='/')
+      BaseIcon.navigation-desktop__logo(name='logo--full')
+    .navigation-desktop__links
+      span(v-for='link in links')
+        router-link.navigation-desktop__link.navigation-text--menu(:to='link.path', v-html='link.name')
+    .navigation-desktop__content
+      a.navigation-desktop__phone.navigation-text--buttons(:href='contact.phone_lin')
+        BaseIcon.navigation-desktop__phone-icon(name='phone')
+        .navigation-desktop__phone-text(v-html='contact.phone')
+      .navigation-desktop__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
+      .navigation-desktop__buttons
+        router-link.navigation-desktop__button--one(v-html='contact.navigation.button_one', :to='contact.navigation.button_one_link')
+        router-link.navigation-desktop__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')

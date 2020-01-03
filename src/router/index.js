@@ -5,6 +5,11 @@ import PageNotFound from 'pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const Home = () => import('@/pages/home/home')
+const About = () => import('pages/about/about')
+const NewPatient = () => import('pages/patient/patient')
+const Invisalign = () => import('pages/invisalign/invisalign')
+const Treatments = () => import('pages/treatments/treatments')
+const Contact = () => import('pages/contact/contact')
 
 Vue.use(VueRouter)
 
@@ -14,8 +19,44 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'Home',
-      navigation: true,
+      navigation: false,
+      mobile: true,
       component: Home
+    },
+    {
+      path: '/about',
+      name: 'About',
+      navigation: true,
+      mobile: true,
+      component: About
+    },
+    {
+      path: '/new-patient',
+      name: 'New Patient',
+      navigation: true,
+      mobile: true,
+      component: NewPatient
+    },
+    {
+      path: '/invisalign',
+      name: 'Invisalign',
+      navigation: true,
+      mobile: true,
+      component: Invisalign
+    },
+    {
+      path: '/treatments',
+      name: 'Treatments',
+      navigation: true,
+      mobile: true,
+      component: Treatments
+    },
+    {
+      path: '/contact-us',
+      name: 'Contact Us',
+      navigation: true,
+      mobile: true,
+      component: Contact
     },
     {
       path: '/style-guide',

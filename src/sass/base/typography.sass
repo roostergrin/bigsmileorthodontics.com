@@ -8,28 +8,42 @@ body
     font-size: 14px
   text-rendering: optimizeLegibility
   line-height: 1.467
+  color: $c4
   font-family: $font
   font-size: 16px
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
 h1
-  line-height: 1.25
-  font-size: 36px
+  @include phone
+    font-size: rem-calc(40px)
+  padding-bottom: 1rem
+  text-transform: uppercase
+  line-height: normal
+  font-size: rem-calc(48px)
+  font-weight: 600
 
 h2
-  line-height: 1.25
-  letter-spacing: 2.8px
-  font-size: 22px
+  line-height: normal
+  font-size: rem-calc(42px)
+  font-weight: 600
 
 h3
-  line-height: 1.12
-  font-size: 22px
-  font-weight: 700
+  line-height: normal
+  font-size: rem-calc(36px)
+  font-weight: 400
 
 h4
-  line-height: 1.12
-  font-size: 18px
+  padding-bottom: .75rem
+  line-height: normal
+  font-size: rem-calc(24px)
+  font-weight: 600
+
+h5
+  padding-bottom: .5rem
+  line-height: normal
+  font-size: rem-calc(21px)
+  font-weight: 600
 
 a
   text-decoration: none
@@ -43,6 +57,32 @@ input[type=text], input[type=textarea]
   -webkit-appearance: none
 
 .hero-text
-  line-height: 1.25
-  font-size: 52px
-  font-weight: bold
+  &--home
+    @include phone-lg
+      line-height: rem-calc(55px)
+      font-size: rem-calc(50px)
+    @include phone-land-lg
+      line-height: rem-calc(45px)
+      font-size: rem-calc(45px)
+    @include phone
+      line-height: rem-calc(45px)
+      font-size: rem-calc(45px)
+    color: $c1
+    font-size: rem-calc(60px)
+    font-weight: 600
+
+  &--pages
+    font-size: 48px
+    font-weight: 600
+
+.navigation-text
+
+  &--menu
+    text-transform: uppercase
+    color: $c1
+    font-size: 18px
+    font-weight: 600
+
+  &--buttons
+    font-size: 21px
+    font-weight: 400

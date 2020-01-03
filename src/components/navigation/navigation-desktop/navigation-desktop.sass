@@ -1,3 +1,54 @@
 .navigation-desktop
-  span
-    margin: auto rem-calc(6)
+  display: flex
+  position: fixed
+  z-index: 100
+  box-shadow: 5px 5px 10px 0 rgba($black, 0.1)
+  background-color: $white
+  padding: 1rem 0
+  width: 100%
+  height: 9.5rem
+
+  &__container
+    @extend .container--large
+    align-items: center
+    justify-content: space-between
+
+  &__logo
+    width: 20rem
+    height: calc(20rem * .25)
+
+  &__link
+    padding: 0 1rem
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__subtitle
+    margin: .5rem 0
+
+  &__phone
+    display: flex
+    align-items: center
+    color: $c2
+
+  &__phone-icon
+    display: inline-block
+    margin-right: .5rem
+    width: 1.2rem
+    height: calc(1.2rem * 1.2)
+    fill: $c3
+
+  &__buttons
+    display: flex
+
+  &__button
+
+    &--one
+      @include button-basic--clear-slide($c2, $white, $c2)
+      margin-right: .25rem
+
+    &--two
+      @include button-basic--fill-slide($white, $c3, $c3, $c3)
+      margin-left: .25rem

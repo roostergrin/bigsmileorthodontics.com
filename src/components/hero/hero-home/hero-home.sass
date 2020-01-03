@@ -1,0 +1,171 @@
+.hero-home
+  @media screen and (max-width: 1430px)
+    top: 5rem
+    margin-bottom: 5rem
+    height: calc(100vh - 5rem)
+  @include phone-lg
+    height: auto
+  @include phone-land-lg
+    height: auto
+  position: relative
+  top: 9.5rem
+  margin-bottom: 9.5rem
+  width: 100%
+  height: calc(100vh - 9.5rem)
+
+  &__background
+    @include phone-lg
+      background-position: 5% top
+      height: 100vh
+    @include phone-land-lg
+      background-position: 5% top
+      height: 100vh
+    @extend .image--bg
+    background-position: left top
+
+  &__container
+    @extend .container
+    @include tablet-lg
+      align-items: flex-end
+    @include phone-lg
+      height: calc(100vh - 5rem)
+    @include phone-land-lg
+      height: calc(100vh - 5rem)
+    align-items: center
+    z-index: 1
+    height: 100%
+
+  &__column
+    @extend .col-3--offset
+    @extend .col-9
+    @include tablet-lg
+      margin-left: 0
+      padding-bottom: 2rem
+      width: 100%
+    @include phone-lg
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 2
+      padding-bottom: 1rem
+      padding-left: 1rem
+      width: 100%
+      text-align: left
+    @include phone-land-lg
+      margin-left: 40%
+      width: 60%
+      text-align: left
+    text-align: center
+
+  &__title
+    @include phone-lg
+      text-align: left
+    @include phone-land-lg
+      text-align: left
+
+  &__subtitle
+    @include phone-lg
+      padding-top: .5rem
+      text-align: left
+      line-height: rem-calc(40px)
+      font-size: rem-calc(35px)
+    @include phone
+      line-height: rem-calc(33px)
+      font-size: rem-calc(30px)
+    @include phone-land-lg
+      line-height: rem-calc(33px)
+      font-size: rem-calc(30px)
+    text-transform: uppercase
+    font-size: rem-calc(42px)
+
+  &__button
+    @include button-basic--fill-slide($white, $c3, $c3, $c3)
+    @include phone-lg
+      margin-bottom: 0
+    display: inline-block
+    margin: 1rem 0
+
+  &__card-container
+    @include phone-lg
+      display: block
+      position: relative
+      z-index: 2
+      background-color: $c1
+      padding: 2rem .5rem
+    @include phone-land-lg
+      display: block
+      position: relative
+      z-index: 2
+      background-color: $c1
+      padding: 2rem 5rem
+    display: none
+
+  &__card
+    @include tablet
+      margin-left: 0
+      padding: 1rem
+      width: 100%
+    @include phone-lg
+      display: none
+    @include phone-land-lg
+      display: none
+    margin-left: 12.5%
+    border-radius: 15px
+    box-shadow: 5px 5px 10px 0 rgba($black, 0.5)
+    background-color: $white
+    padding: 3rem
+    width: 75%
+
+    &--mobile
+      @include phone-lg
+        display: block
+      @include phone-land-lg
+        display: block
+      display: none
+
+  &__title-card
+    color: $c1
+
+  &__button-container
+    margin: 1rem 0 1rem 2rem
+
+  &__icon
+    float: left
+    margin-right: .5rem
+    width: .5rem
+    height: calc(.5rem * 2.1)
+
+  &__button-details
+    cursor: pointer
+    color: $c1
+
+  &__content
+    display: none
+    opacity: 0
+    margin-left: 2rem
+
+    &--active
+      display: block
+      opacity: 1
+
+  &__body
+    text-align: left
+    color: $c1
+
+  &__details
+    @include phone-lg
+      margin-left: 5%
+      width: 90%
+    @include phone-land-lg
+      margin-left: 5%
+      width: 90%
+    margin-left: 25%
+    padding: 1rem 0
+    width: 50%
+    text-align: left
+    color: $c1
+
+  &__button-card
+    @include button-basic--fill-slide($white, $c3, $c3, $c3)
+    display: inline-block
+    z-index: 1

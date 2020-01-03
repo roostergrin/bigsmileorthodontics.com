@@ -1,0 +1,77 @@
+@mixin button-basic--clear-slide($color, $color2, $background)
+  display: block
+  position: relative
+  transition: all 1s ease-in-out
+  border: solid $background 2px
+  border-radius: rem-calc(50px)
+  cursor: pointer
+  padding: .5rem 1rem
+  overflow: hidden
+  text-align: center
+  color: $color
+
+  &:after
+    position: absolute
+    top: -230px
+    left: -80px
+    transform: scale(.01)
+    transition: all .6s ease-in-out
+    z-index: -1
+    border-radius: 50%
+    background: $background
+    width: calc(297px  * 2)
+    height: calc(297px * 2)
+    content: ''
+    transform-origin: center center
+
+  @media (hover: hover)
+    &:hover
+      transition: all .6s ease-in-out
+      box-shadow: 0 2px 4px 0 rgba($black, .33)
+      color: $color2
+
+      span
+        transition: color .6s ease-in-out
+
+      &:after
+        transform: scale(1)
+        transition: all .6s ease-in-out
+
+@mixin button-basic--fill-slide($color, $color2, $background, $border)
+  display: block
+  position: relative
+  transition: all 1s ease-in-out
+  border: solid $border 2px
+  border-radius: rem-calc(50px)
+  cursor: pointer
+  padding: .5rem 1rem
+  overflow: hidden
+  text-align: center
+  color: $color
+
+  &:after
+    position: absolute
+    top: -230px
+    left: -20px
+    transform: scale(1)
+    transition: all .6s ease-in-out
+    z-index: -1
+    border-radius: 50%
+    background: $background
+    width: calc(297px  * 2)
+    height: calc(297px * 2)
+    content: ''
+    transform-origin: center center
+
+  @media (hover: hover)
+    &:hover
+      transition: all .6s ease-in-out
+      box-shadow: 0 2px 4px 0 rgba($black, .33)
+      color: $color2
+
+      span
+        transition: color .6s ease-in-out
+
+      &:after
+        transform: scale(.01)
+        transition: all .6s ease-in-out

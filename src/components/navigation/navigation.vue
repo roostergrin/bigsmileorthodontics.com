@@ -2,6 +2,7 @@
 
 <script>
 import NavigationDesktop from 'components/navigation/navigation-desktop/navigation-desktop'
+import NavigationMobile from 'components/navigation/navigation-mobile/navigation-mobile'
 
 export default {
   data () {
@@ -17,10 +18,16 @@ export default {
       return this.$router.options.routes.filter((link) => {
         return link.navigation
       })
+    },
+    linksMobile () {
+      return this.$router.options.routes.filter((link) => {
+        return link.mobile
+      })
     }
   },
   components: {
-    NavigationDesktop
+    NavigationDesktop,
+    NavigationMobile
   }
 }
 </script>

@@ -1,0 +1,127 @@
+.navigation-mobile
+  position: fixed
+  z-index: 100
+  box-shadow: 5px 5px 10px 0 rgba($black, 0.1)
+  background-color: $white
+  padding: 1rem 0
+  width: 100%
+  height: 5rem
+
+  &__container
+    @extend .container--large
+    justify-content: space-between
+
+    &--drawer
+      @extend .container
+      flex-direction: column
+      padding: 4rem 0
+
+  &__logo
+    width: 12rem
+    height: calc(12rem * .25)
+
+  &__hamburger
+    @include hamburger-basic($c1, .5s, rem-calc(45), rem-calc(45))
+    position: relative
+    z-index: 9999
+    color: $c1
+    font-size: rem-calc(15px)
+    font-weight: 600
+
+    &--text
+      transition: opacity .5s ease-in-out
+      text-transform: uppercase
+
+      .navigation-mobile__hamburger--active &
+        opacity: 0
+
+  &__overlay
+    position: fixed
+    top: 0
+    left: 0
+    transition: opacity .5s ease-in
+    opacity: 0
+    z-index: 9998
+    background: rgba($black, 0.5)
+    width: 100%
+    height: 100%
+    pointer-events: none
+
+    &--open
+      opacity: .6
+      pointer-events: all
+
+  &__drawer
+    @include tablet-lg
+      width: 75vw
+    @include phone-lg
+      width: 100vw
+    @include phone-land-lg
+      overflow-y: scroll
+    @include phone-land
+      width: 75vw
+    position: fixed
+    top: 0
+    right: -100vw
+    transition: right .5s ease-in
+    z-index: 9998
+    background: $white
+    padding: 0 .75rem
+    width: 100%
+    height: 100vh
+    overflow: scroll
+    pointer-events: none
+
+    &--open
+      right: 0
+      pointer-events: all
+
+  &__span
+    @extend h4
+    z-index: 1
+    padding: .75rem
+    text-align: center
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 2rem
+
+  &__subtitle
+    margin: 1.5rem 0
+    text-align: center
+
+  &__phone
+    display: flex
+    align-items: center
+    color: $c2
+
+  &__phone-icon
+    display: inline-block
+    margin-right: .5rem
+    width: 1.2rem
+    height: calc(1.2rem * 1.2)
+    fill: $c3
+
+  &__button
+
+    &--one
+      @include button-basic--clear-slide($c2, $white, $c2)
+      margin-bottom: 1.5rem
+
+    &--two
+      @include button-basic--fill-slide($white, $c3, $c3, $c3)
+
+  &__favicon
+    position: fixed
+    right: -2.5rem
+    bottom: -2rem
+    transition: opacity .6s ease-in .3s
+    opacity: 0
+    z-index: -2
+    width: 17rem
+    height: calc(17rem * .98)
+
+    &--open
+      opacity: 0.1
