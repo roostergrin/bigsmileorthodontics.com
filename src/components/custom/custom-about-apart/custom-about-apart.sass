@@ -1,0 +1,31 @@
+.custom-about-apart
+  background: $c1
+  padding: 4rem 0
+  color: $white
+
+  &__title
+    margin-bottom: 2rem
+    text-align: center
+    color: $c3
+    font-weight: bold
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-6
+    @include tablet-lg
+      padding: 0 2rem
+    @include tablet
+      padding: 0 $gutter
+    padding: 0 4rem
+    text-align: center
+
+  &__tile
+    margin-bottom: 1rem
+
+  &__tile-title
+    @include tablet
+      padding: 0 0 .5rem
+    padding: 0 2rem .5rem
+    font-weight: bold
