@@ -1,0 +1,15 @@
+.custom-about-office
+  h1.custom-about-office__title(v-html='content.title')
+  .custom-about-office__container
+    .custom-about-office__col
+      .custom-about-office__slider
+        .custom-about-office__prev(@click='slidePrev')
+          BaseIcon.custom-about-office__icon.custom-about-office__icon--flip(name='chevron')
+        .custom-about-office__next(@click='slideNext')
+          BaseIcon.custom-about-office__icon(name='chevron')
+        BaseLazyImg.custom-about-office__slide(
+          v-for='(slide, i) in content.slider'
+          :key="'slide - ' + i"
+          :class="{ 'custom-about-office__slide--active': i === activeSlide }"
+          :imageBackground='true'
+          :src='slide.image')
