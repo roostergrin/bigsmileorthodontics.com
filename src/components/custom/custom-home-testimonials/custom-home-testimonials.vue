@@ -21,38 +21,38 @@ export default {
   },
   mixins: [onScroll],
   async mounted () {
-  setInterval(() => {
-    if (this.show === (this.props.testimonials.length - 1)) {
-      this.show = 0
-    } else {
-      this.show++
-    }
-  }, 7500)
-},
-methods: {
-  moveSlide (i) {
-    this.show = i
-  },
-  setSlide (i) {
-    this.show = i
     setInterval(() => {
-      this.setInterval()
+      if (this.show === (this.props.testimonials.length - 1)) {
+        this.show = 0
+      } else {
+        this.show++
+      }
     }, 7500)
   },
-  nextSlide () {
-    if (this.show === (this.props.testimonials.length - 1)) {
-      this.show = 0
-    } else {
-      this.show++
-    }
-  },
-  prevSlide () {
-    if (this.show === 0) {
-      this.show = this.props.testimonials.length - 1
-    } else {
-      this.show--
+  methods: {
+    moveSlide (i) {
+      this.show = i
+    },
+    setSlide (i) {
+      this.show = i
+      setInterval(() => {
+        this.setInterval()
+      }, 7500)
+    },
+    nextSlide () {
+      if (this.show === (this.props.testimonials.length - 1)) {
+        this.show = 0
+      } else {
+        this.show++
+      }
+    },
+    prevSlide () {
+      if (this.show === 0) {
+        this.show = this.props.testimonials.length - 1
+      } else {
+        this.show--
+      }
     }
   }
-}
 }
 </script>

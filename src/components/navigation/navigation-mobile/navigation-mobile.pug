@@ -1,4 +1,4 @@
-.navigation-mobile
+.navigation-mobile(v-if="contact")
   .navigation-mobile__container
     router-link.navigation-mobile__logo-container(to='/')
       BaseIcon.navigation-mobile__logo(name='logo--full')
@@ -6,7 +6,7 @@
         .navigation-mobile__hamburger--text Menu
         span
         span
-          
+
   .navigation-mobile__overlay(@click='toggleMenu', :class="{ 'navigation-mobile__overlay--open': menu }")
   .navigation-mobile__drawer(:class="{'navigation-mobile__drawer--open': menu }")
     .navigation-mobile__container--drawer

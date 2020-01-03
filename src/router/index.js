@@ -5,11 +5,11 @@ import PageNotFound from 'pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const Home = () => import('@/pages/home/home')
-const About = () => import('pages/about/about')
-const NewPatient = () => import('pages/patient/patient')
-const Invisalign = () => import('pages/invisalign/invisalign')
-const Treatments = () => import('pages/treatments/treatments')
-const Contact = () => import('pages/contact/contact')
+const About = () => import('@/pages/about/about')
+const NewPatient = () => import('@/pages/patient/patient')
+const Invisalign = () => import('@/pages/invisalign/invisalign')
+const Treatments = () => import('@/pages/treatments/treatments')
+const Contact = () => import('@/pages/contact/contact')
 
 Vue.use(VueRouter)
 
