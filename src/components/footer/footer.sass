@@ -1,2 +1,106 @@
 .footer
-  padding: rem-calc(50) 0
+  background: $c1
+  color: $white
+
+  &__top
+    @include phone-lg
+      justify-content: space-between
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    background: $c7
+    padding: 0 1rem 2rem
+
+  &__banner-image
+    @include tablet-lg
+      width: calc(100% / 3)
+    @include phone-lg
+      width: 47.5%
+    margin-top: 2rem
+    background: center / contain no-repeat
+    width: 18.5%
+    height: 6rem
+
+    &:nth-child(3)
+      @include phone-lg
+        margin-left: 26.25%
+
+  &__container
+    @extend .container
+
+  &__col
+    @extend .col-8
+    @extend .col-2--offset
+    @include tablet-lg
+      margin-left: 10%
+      width: 80%
+    @include phone-lg
+      flex-direction: column
+    display: flex
+    justify-content: space-between
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+  &__info,
+  &__social
+    width: 35%
+
+  &__info
+    @include tablet-lg
+      width: 45%
+    @include phone-lg
+      width: 100%
+      text-align: center
+
+  &__social
+    @include tablet-lg
+      width: 20%
+    @include phone-lg
+      width: 100%
+      text-align: center
+
+  &__map
+    @include phone-lg
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 1rem 0
+
+  &__link
+    display: block
+    transition: color .25s ease
+    color: $white
+    font-size: 16px
+
+    &:hover
+      color: $c8
+
+  &__social-bar
+    @include phone-lg
+      justify-content: center
+    display: flex
+
+  &__social-title
+    margin-bottom: .5rem
+
+  &__social-item
+    margin-right: .5rem
+    width: 2.5rem
+    height: 2.5rem
+
+    &:hover
+      .social-1
+        fill: $c8
+
+    &:last-child
+      margin-right: 0
+
+  &__social-icon
+    width: 100%
+    height: 100%
+    svg
+      width: 100%
+      height: 100%
+    .social-1
+      transition: fill .25s ease

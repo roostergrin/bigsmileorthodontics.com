@@ -63,6 +63,8 @@
     height: 40%
 
   &__banner
+    @include phone-lg
+      justify-content: space-between
     display: flex
     flex-wrap: wrap
     align-items: center
@@ -73,6 +75,8 @@
   &__banner-image
     @include tablet-lg
       width: calc(100% / 3)
+    @include phone-lg
+      width: 47.5%
     margin-top: 2rem
     background: center / contain no-repeat
     width: 18.5%

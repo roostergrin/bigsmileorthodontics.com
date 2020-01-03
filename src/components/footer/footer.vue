@@ -2,6 +2,10 @@
 
 <script>
 export default {
-
+  computed: {
+    content () {
+      return this.$store.state.app['contact-information']
+    }
+  }
 }
 </script>
