@@ -1,0 +1,13 @@
+.custom-patients-finance
+  .custom-patients-finance__background(:style="{'background' : 'url(' + backgroundImg + ') no-repeat center / cover'}")
+    .custom-patients-finance__container
+      .custom-patients-finance__col-small
+      .custom-patients-finance__col-lg
+
+        .custom-patients-finance__title(v-html="props.title")
+        .custom-patients-finance__columns
+          .custom-patients-finance__row(v-for="section in props.sections")
+            BaseIcon.custom-patients-finance__icon(:name="section.icon")
+            .custom-patients-finance__section-container
+              .custom-patients-finance__section-title(v-html="section.section_title")
+              .custom-patients-finance__section-content(v-html="section.content")
