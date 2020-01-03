@@ -1,0 +1,13 @@
+.custom-about-team
+  .custom-about-team__upper(v-waypoint='{ active: true, callback: onScroll, options: options }', :class="{ 'custom-about-team__upper--active': active }")
+    h1.custom-about-team__title(v-html='content.title')
+    .custom-about-team__subtitle(v-html='content.subtitle')
+  .custom-about-team__container(v-waypoint='{ active: true, callback: onContainerScroll, options: options }', :class="{ 'custom-about-team__container--half': tiles === 'two', 'custom-about-team__container--third': tiles === 'three', 'custom-about-team__container--quarter': tiles === 'four', 'custom-about-team__container--active': containerActive }")
+    .custom-about-team__tile(v-for='tile, i in content.gallery', :key='i', :style="{ transitionDelay: (i  * .2) + 's'}" onclick='')
+      .custom-about-team__image-container
+        .custom-about-team__image(:style="{ backgroundImage: 'url(' + tile.image + ')'}" onclick='')
+          img.sr-only(:src='tile.image', :alt='tile.name')
+      .custom-about-team__tile-container
+        .custom-about-team__name(v-html='tile.name')
+        .custom-about-team__position(v-html='tile.title')
+        .custom-about-team__bio(v-html='tile.bio') 
