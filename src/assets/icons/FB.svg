@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="13px" height="27px" viewBox="0 0 13 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
-    <title>Shape@2x</title>
-    <desc>Created with Sketch.</desc>
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-18.000000, -12.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g transform="translate(-0.000000, -0.000000)">
-                <g>
-                    <g>
-                        <path d="M26.5015552,38.1114768 L26.5015552,25.0542097 L30.1059319,25.0542097 L30.5835897,20.554603 L26.5015552,20.554603 L26.507679,18.3025066 C26.507679,17.12894 26.6191835,16.5001162 28.3047642,16.5001162 L30.5580738,16.5001162 L30.5580738,12 L26.9531867,12 C22.6231375,12 21.0990725,14.1827933 21.0990725,17.8535652 L21.0990725,20.5551126 L18.4,20.5551126 L18.4,25.0547193 L21.0990725,25.0547193 L21.0990725,38.1114768 L26.5015552,38.1114768 Z"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 13 27" style="enable-background:new 0 0 13 27;" xml:space="preserve">
+<style type="text/css">
+	.social-1{fill:#FFFFFF;}
+</style>
+<title>Shape@2x</title>
+<desc>Created with Sketch.</desc>
+<path class="social-1" d="M8.5,26.1V13.1h3.6l0.5-4.5H8.5l0-2.3c0-1.2,0.1-1.8,1.8-1.8h2.3V0H9C4.6,0,3.1,2.2,3.1,5.9v2.7H0.4v4.5h2.7
+	v13.1H8.5z"/>
 </svg>

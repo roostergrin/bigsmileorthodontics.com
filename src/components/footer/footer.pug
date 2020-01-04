@@ -1,2 +1,36 @@
-footer.footer
-  h1 Footer
+footer.footer(v-if='content')
+  .footer__top
+    BaseLazyImg.footer__banner-image(
+      v-for='(image, i) in content.footer.logos'
+      :key='"image-" + i'
+      :src='image.logo')
+  .footer__bottom
+    .footer__container
+      .footer__col
+        .footer__info
+          a.footer__link(
+            :href='content.address_link'
+            rel='noreferrer noopener'
+            target='_blank'
+            v-html='content.address')
+          a.footer__link(
+            :href='`tel:+1${content.phone_link}`'
+            rel='noreferrer noopener'
+            target='_blank'
+            v-html='`P: ${content.phone}`')
+          a.footer__link(
+            :href='`mailto:${content.email}`'
+            rel='noreferrer noopener'
+            target='_blank'
+            v-html='`E: ${content.email}`')
+        .footer__map(v-html='content.google_map')
+        .footer__social
+          .footer__social-title Connect with us
+          .footer__social-bar
+            a.footer__social-item(
+              v-for='(social, i) in content.social_media'
+              :key='"social-" + i'
+              :href='social.link'
+              rel='noreferrer noopener'
+              target='_blank')
+              BaseIcon.footer__social-icon(:name='social.icon')
