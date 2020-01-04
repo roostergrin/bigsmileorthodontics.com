@@ -1,0 +1,13 @@
+.custom-invisalign-accelerated
+  .custom-invisalign-accelerated__background
+  .custom-invisalign-accelerated__container
+    .custom-invisalign-accelerated__image-container
+      BaseLazyImg.custom-invisalign-accelerated__image(:src='props.image')
+    .custom-invisalign-accelerated__content
+      h1.custom-invisalign-accelerated__title(v-html='props.title')
+      .custom-invisalign-accelerated__text(v-html='props.upper_text')
+      .custom-invisalign-accelerated__list
+        .custom-invisalign-accelerated__item(v-for='(item, i) in props.items', :key='`item-${i}`')
+          BaseIcon.custom-invisalign-accelerated__icon(name='Tooth')
+          .custom-invisalign-accelerated__item-text(v-html='item.text')
+      .custom-invisalign-accelerated__text(v-html='props.lower_text')          
