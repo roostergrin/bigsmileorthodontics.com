@@ -1,0 +1,43 @@
+.custom-patients-forms
+  height: 30rem
+
+  &__container
+    display: flex
+    height: 100%
+
+  &__col
+    width: 50%
+
+    @include tablet
+      width: 100%
+
+    &:first-of-type
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+    &--photo
+      @include tablet
+        display: none
+
+
+  &__title
+    @extend h1
+    text-align: center
+
+  &__button-row
+    display: flex
+
+  &__button
+    background-color: $c3
+    color: $white
+    padding: 10px 15px
+    border-radius: 25px
+    margin: 0 1rem
+
+    &:first-of-type
+      margin-left: 0
+
+    &:last-of-type
+      margin-right: 0

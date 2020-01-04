@@ -1,2 +1,6 @@
-.pages-patient
-  HeroPhoto
+.pages-patient(v-if="props")
+  HeroPhoto(:props="props.hero")
+  GradientImage(:props="props.gradient_image")
+  PatientFinance(:props="props.finance")
+  PatientForms(:props="props.forms")
+  //- pre {{ props }}
