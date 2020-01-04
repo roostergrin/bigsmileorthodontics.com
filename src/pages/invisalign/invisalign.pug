@@ -1,2 +1,5 @@
-.pages-invisalign
-  h1 invisalign
+.pages-invisalign(v-if='props')
+  HeroPages(:props='props.hero')  
+  BlockImageText(:props='props.invisalign' light-color)
+  BlockImageText(:props='props.invisalign_teen' text-right)
+  BlockImageText(:props='props.itero')
