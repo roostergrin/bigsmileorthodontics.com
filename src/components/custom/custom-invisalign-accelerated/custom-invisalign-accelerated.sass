@@ -1,0 +1,52 @@
+.custom-invisalign-accelerated
+  position: relative
+  background: $c10
+  padding: 3rem 0
+
+  &__background
+    @include tablet
+      display: none
+    @extend .image--bg
+    @include desktop-lg
+      background: radial-gradient(circle at 27%, rgba($white, .45) 5%, rgba($black, 0) 35%)
+    background: radial-gradient(circle at 23%, rgba($white, .45) 5%, rgba($black, 0) 35%)
+
+  &__container
+    @extend .container
+
+  &__image-container, &__content
+    @extend .col-6
+    padding: 0
+
+  &__image
+    @extend .image--bg
+    background-position: left
+    background-size: contain
+    max-width: 510px
+
+  &__list
+    padding: 1rem 0
+
+  &__item
+    display: flex
+    align-items: center
+    line-height: 1.67
+
+  &__item-text,
+  &__text
+    color: $white
+
+  &__icon
+    margin-right: rem-calc(10)
+    width: 1rem
+    height: 1rem
+    line-height: 1
+
+  &__title
+    @include desktop
+      font-size: 48px
+    color: $c3
+    font-size: 42px
+
+    @media screen and (max-width: $width)
+      font-size: 36px

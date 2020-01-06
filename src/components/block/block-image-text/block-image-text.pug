@@ -1,0 +1,7 @@
+.block-image-text(:class="{ 'block-image-text--light': lightColor, 'block-image-text--reverse': textRight }")
+  BaseLazyBg.block-image-text__background(:src='props.image')
+  .block-image-text__container
+    .block-image-text__content
+      h1.block-image-text__title(v-html='props.title')
+      .block-image-text__text(v-html='props.text')
+          

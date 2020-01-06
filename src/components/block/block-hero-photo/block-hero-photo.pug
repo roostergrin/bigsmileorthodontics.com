@@ -1,3 +1,4 @@
-section.block-hero-photo(v-if="props", :style="{ 'background' : 'url(' + img + ') no-repeat center / cover'}")
-  //- .block-hero-photo__overlay
+section.block-hero-photo(v-if="props")
+  .block-hero-photo__background(:style="{ 'background' : 'url(' + img + ') no-repeat center / cover'}")
+  .block-hero-photo__overlay
   .block-hero-photo__title {{ title }}

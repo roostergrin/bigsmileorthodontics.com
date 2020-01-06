@@ -9,7 +9,6 @@ export default {
   },
   computed: {
     backgroundImg () {
-
       const screenIsMobile = window.innerWidth < 1024
       if (screenIsMobile) {
         return this.props.mobile_background_img
