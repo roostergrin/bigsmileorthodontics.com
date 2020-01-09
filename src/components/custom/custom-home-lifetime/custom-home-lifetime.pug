@@ -1,3 +1,11 @@
 .custom-home-lifetime
-  .custom-home-lifetime__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
-    h1.custom-home-lifetime__title lifetime
+  .custom-home-lifetime__section(v-for='(section, i) in props.options')
+    BaseLazyBg.custom-home-lifetime__image(:src='section.image')
+    .custom-home-lifetime__container
+      .custom-home-lifetime__column
+        h1.custom-home-lifetime__title(v-html="section.title")
+        .custom-home-lifetime__subtitle(v-html="section.subtitle")
+        .custom-home-lifetime__learn-more-container(v-if="section.button_learn_link")
+          BaseIcon.custom-home-lifetime__chevron(name='chevron')
+          router-link.custom-home-lifetime__learn-more(:to="section.button_learn_link")   Learn More
+        router-link.custom-home-lifetime__button(:to="section.button_link", v-html="section.button")
