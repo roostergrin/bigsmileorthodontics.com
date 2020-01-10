@@ -1,0 +1,92 @@
+.block-hero-card
+  @extend .padding-nav
+  @include phone-lg
+    position: relative
+    padding-top: 0
+  @include phone-land-lg
+    position: relative
+    padding-top: 0
+  position: absolute
+  top: 0
+  left: 0
+
+  &__card-container
+    @include tablet
+      margin-left: 30vw
+      width: 70vw
+    @include phone-lg
+      position: relative
+      margin-top: 0
+      margin-left: 0
+      background-color: $c1
+      padding: 2rem .5rem
+      width: 100%
+    @include phone-land-lg
+      position: relative
+      flex-direction: row
+      align-items: flex-start
+      margin-top: 0
+      margin-left: 0
+      background-color: $c1
+      padding: 2rem .5rem
+      width: 100%
+    @include phone-land
+      flex-wrap: wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 4rem
+    margin-left: 50vw
+    width: 50vw
+    // border: solid 1px $danger
+
+  &__card
+    @include phone-lg
+      width: 100%
+    @include phone-land-lg
+      margin: 0 .5rem
+      width: 50%
+    @include phone-land
+      margin: .5rem 0
+      width: 100%
+    margin: 1rem 0
+    border-radius: 15px
+    box-shadow: 0 0 10px 0 rgba($black, 0.2)
+    background-color: $white
+    padding: 1rem 2rem
+
+    .block-hero-card__card-container--treatments &
+
+      &:nth-child(2)
+        @include phone-lg
+          width: 100%
+        @include phone-land-lg
+          width: 50%
+        @include phone-land
+          width: 100%
+        width: 30rem
+        .block-hero-card__body
+          font-weight: 400
+
+  &__card-title
+    text-align: center
+    color: $c1
+
+  &__body
+    padding: 1rem 0 1.25rem
+    text-align: center
+    color: $c1
+    font-weight: 600
+
+    ul
+      margin: 0
+      text-align: left
+
+  &__button-container
+    display: flex
+    justify-content: center
+
+  &__button
+    @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
+    display: inline-block
+    z-index: 1
