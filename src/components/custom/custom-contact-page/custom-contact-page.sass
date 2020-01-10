@@ -1,0 +1,77 @@
+.custom-contact-page
+  @extend .padding-basic
+
+  &__container
+    @extend .container
+    @include tablet
+      justify-content: center
+
+  &__column
+
+    &--left
+      @extend .col-1--offset
+      @extend .col-5
+      display: flex
+      flex-wrap: wrap
+
+    &--right
+      @extend .col-1--offset
+      @extend .col-4
+      @include tablet
+        margin-bottom: 4rem
+        width: 80%
+      @include phone-lg
+        width: 100%
+      position: relative
+      height: 20rem
+
+    &--form
+      @extend .col-3--offset
+      @extend .col-6
+
+  &__title,
+  &__info
+    // border: solid 1px $danger
+    padding-bottom: 3rem
+    width: 50%
+    text-transform: none
+
+  &__title
+    @include tablet-lg
+      width: 60%
+    @include tablet
+      padding-right: 1rem
+      width: 50%
+      text-align: right
+    @include phone-lg
+      padding-right: 0
+      padding-bottom: .5rem
+      width: 100%
+      text-align: center
+
+  &__info
+    @include tablet-lg
+      width: 40%
+    @include tablet
+      padding-left: 1rem
+      width: 50%
+    @include phone-lg
+      padding-bottom: 1.5rem
+      padding-left: 0
+      width: 100%
+      text-align: center
+
+  &__link
+    &:hover
+      color: $c1
+
+  &__map
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &__form-title
+    text-align: center
+    font-weight: 600
