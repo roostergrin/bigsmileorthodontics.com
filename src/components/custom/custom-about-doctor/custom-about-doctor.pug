@@ -3,13 +3,13 @@
   .custom-about-doctor__overlay
   .custom-about-doctor__container
     .custom-about-doctor__col-1
-      h1.custom-about-doctor__title(v-html='content.title')
+      h1.custom-about-doctor__title(v-html='content.title', :class="{ 'custom-about-doctor__title--active': !$store.state.loaded }")
       .custom-about-doctor__body(v-html='content.body')
     .custom-about-doctor__col-2
       BaseLazyImg.custom-about-doctor__image-top(:src='content.image_top')
       BaseLazyImg.custom-about-doctor__image-bottom(:src='content.image_bottom')
   .custom-about-doctor__banner
     BaseLazyImg.custom-about-doctor__banner-image(
-      v-for='(image, i) in content.banner'
-      :key='"image-" + i'
+      v-for='(image, i) in content.banner',
+      :key='"image-" + i',
       :src='image.logo')
