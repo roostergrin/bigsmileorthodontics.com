@@ -1,6 +1,6 @@
 .custom-about-team
   .custom-about-team__upper(v-waypoint='{ active: true, callback: onScroll, options: options }', :class="{ 'custom-about-team__upper--active': active }")
-    h1.custom-about-team__title(v-html='content.title')
+    h1.custom-about-team__title(v-html='content.title', :class="{ 'custom-about-team__title--active': active }")
     .custom-about-team__subtitle(v-html='content.subtitle')
   .custom-about-team__container(v-waypoint='{ active: true, callback: onContainerScroll, options: options }', :class="{ 'custom-about-team__container--half': tiles === 'two', 'custom-about-team__container--third': tiles === 'three', 'custom-about-team__container--quarter': tiles === 'four', 'custom-about-team__container--active': containerActive }")
     .custom-about-team__tile(v-for='tile, i in content.gallery', :key='i', :style="{ transitionDelay: (i  * .2) + 's'}" onclick='')
