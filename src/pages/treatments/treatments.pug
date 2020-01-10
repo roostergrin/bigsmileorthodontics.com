@@ -1,2 +1,8 @@
-.pages-treatments
-  h1 treatments
+.pages-treatments(v-if='props')
+  HeroPhoto(:props="props.hero")
+  BlockHeroCard(:props='props.hero_card')
+  CustomTreatmentsTypes(:props='props.treatments_types')
+  CustomTreatmentsDamon(:props='props.treatments_damon')
+  CustomTreatmentsTreatment(:props='props.treatments_treatment')
+  CustomTreatmentsBraces(:props='props.treatments_braces')
+  CustomTreatmentsOrtho(:props='props.treatments_ortho')
