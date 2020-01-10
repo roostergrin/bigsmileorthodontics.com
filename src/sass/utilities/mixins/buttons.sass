@@ -37,12 +37,13 @@
         transform: scale(1)
         transition: all .6s ease-in-out
 
-@mixin button-basic--fill-slide($color, $color2, $background, $border)
+@mixin button-basic--fill-slide($color, $color2, $background, $background2, $border)
   display: block
   position: relative
   transition: all 1s ease-in-out
   border: solid $border 2px
   border-radius: rem-calc(50px)
+  background-color: transparent
   cursor: pointer
   padding: .5rem 1rem
   overflow: hidden
@@ -67,6 +68,7 @@
     &:hover
       transition: all .6s ease-in-out
       box-shadow: 0 2px 4px 0 rgba($black, .33)
+      background-color: $background2
       color: $color2
 
       span
