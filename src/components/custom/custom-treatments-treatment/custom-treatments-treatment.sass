@@ -1,0 +1,84 @@
+.custom-treatments-treatment
+  position: relative
+  overflow: hidden
+
+  &__type
+    display: flex
+
+    &--reverse
+      background-color: $c1
+      color: $white
+
+  &__container
+    @extend .container
+    max-width: auto
+
+    .custom-treatments-treatment__type--reverse &
+      flex-direction: row-reverse
+
+  &__title
+    @include title-basic-fade-up
+    width: 100%
+    text-align: left
+
+  &__column
+    &--left
+      @include tablet
+        margin: 0 -2rem
+        width: calc(100% + 4rem)
+        height: 30rem
+      @include phone-land-lg
+        height: 20rem
+      position: relative
+      margin-left: -20rem
+      width: calc(50% + 20rem)
+
+      .custom-treatments-treatment__type--reverse &
+        @include tablet
+          margin: 0 -2rem
+          width: calc(100% + 4rem)
+          height: 30rem
+        @include phone-land-lg
+          height: 20rem
+        margin-right: -20rem
+        margin-left: 0
+        width: calc(50% + 20rem)
+
+    &--right
+      @extend .col-6
+      @include tablet
+        padding: 4rem 0
+      padding: 2rem 0 2rem 4rem
+
+      .custom-treatments-treatment__type--reverse &
+        @include tablet
+          padding: 4rem 0
+        padding: 2rem 4rem 2rem 0
+
+  &__image
+    @extend .image--bg
+
+  &__provider-container
+    display: flex
+    padding: 1rem 0
+
+  &__provider
+    @include phone-lg
+      height: 4rem
+    @include phone
+      height: 3rem
+    margin-right: 1rem
+    width: auto
+    height: 5rem
+
+  &__body
+    ul
+      margin: 0
+      li
+        margin: 0
+        margin-top: -18px
+
+  &__button
+    @include button-basic--fill-slide($white, $c3, $c3, $white, $c3)
+    display: inline-block
+    z-index: 1

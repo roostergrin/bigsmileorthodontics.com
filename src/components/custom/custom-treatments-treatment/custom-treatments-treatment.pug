@@ -1,0 +1,13 @@
+.custom-treatments-treatment
+  .custom-treatments-treatment__type(v-for='(type, i) in props.type',
+    :key='"type-" + i', :class="{ 'custom-treatments-treatment__type--reverse': i % 2 }")
+    .custom-treatments-treatment__container
+      .custom-treatments-treatment__column--left
+        BaseLazyImg.custom-treatments-treatment__image(:src='type.image')
+      .custom-treatments-treatment__column--right(v-waypoint='{ active: true, callback: onWaypoint, options: options }')
+          h1.custom-treatments-treatment__title(v-html='type.title')
+          .custom-treatments-treatment__provider-container(v-if='type.providers')
+            img.custom-treatments-treatment__provider(v-for='(icon, i) in type.providers',
+              :key='"icon-" + i', :src='icon.image')
+          .custom-treatments-treatment__body(v-html='type.body')
+          router-link.custom-treatments-treatment__button(v-if='type.button', v-html='type.button', :to='type.button_link')
