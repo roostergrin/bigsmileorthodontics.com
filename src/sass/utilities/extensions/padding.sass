@@ -1,2 +1,10 @@
 .padding-basic
   padding: 4rem 0
+
+.padding-nav
+  // compensation for desktop-sized navbar
+  @media screen and (min-width: 1431px)
+    padding-top: 152px
+  // compensation for mobile-sized navbar
+  @media screen and (max-width: 1430px)
+    padding-top: 80px
