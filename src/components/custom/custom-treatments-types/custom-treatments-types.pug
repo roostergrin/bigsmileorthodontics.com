@@ -1,0 +1,13 @@
+.custom-treatments-types
+  .custom-treatments-types__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    h1.custom-treatments-types__title(v-html='props.title', :class="{ 'custom-treatments-types__title--active': active }")
+  .custom-treatments-types__container
+    .custom-treatments-types__gallery(v-for='(gallery, i) in props.types',
+      :key='"gallery-" + i', @click='setType(i)', :class="{ 'custom-treatments-types__gallery--active': activeType === i }")
+      BaseLazyBg.custom-treatments-types__image(:src='gallery.image')
+      .custom-treatments-types__subtitle(v-html='gallery.subtitle')
+  .custom-treatments-types__container.custom-treatments-types__container--body
+    .custom-treatments-types__info-container
+      .custom-treatments-types__info(v-for='(info, i) in props.types',
+        :key='"info-" + i', :class="{ 'custom-treatments-types__info--active': activeType === i }")
+        .custom-treatments-types__body(v-html='info.body')
