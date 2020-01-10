@@ -1,0 +1,15 @@
+.custom-treatments-damon
+  .custom-treatments-damon__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    h1.custom-treatments-damon__title(v-html='props.title', :class="{ 'custom-treatments-damon__title--active': active }")
+  .custom-treatments-damon__container
+    .custom-treatments-damon__type(v-for='(type, i) in props.types',
+    :key='"type-" + i')
+      h3.custom-treatments-damon__subtitle(v-html='type.title')
+      BaseLazyImg.custom-treatments-damon__image(:src='type.image')
+      .custom-treatments-damon__body(v-html='type.body')
+  .custom-treatments-damon__container
+    .custom-treatments-damon__column
+      .custom-treatments-damon__list(v-for='(list, i) in props.list',
+        :key='"list-" + i')
+        BaseIcon.custom-treatments-damon__icon(name='Tooth')
+        .custom-treatments-damon__item-text(v-html='list.text')
