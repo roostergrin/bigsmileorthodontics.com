@@ -1,0 +1,7 @@
+.custom-treatments-ortho
+  .custom-treatments-ortho__overlay
+  BaseLazyBg.custom-treatments-ortho__image(:src='props.image', :class="{ 'custom-treatments-ortho__image--active': active }")
+  .custom-treatments-ortho__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    h1.custom-treatments-ortho__title(v-html='props.title', :class="{ 'custom-treatments-ortho__title--active': active }")
+    .custom-treatments-ortho__column--left
+      .custom-treatments-ortho__body(v-html='props.text')

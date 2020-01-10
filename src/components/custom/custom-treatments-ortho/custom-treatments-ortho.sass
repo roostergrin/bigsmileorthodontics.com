@@ -1,0 +1,52 @@
+.custom-treatments-ortho
+  @extend .padding-basic
+  @include tablet
+    padding-top: 0
+  position: relative
+
+  &__overlay
+    @extend .overlay
+    @include tablet
+      display: none
+    background-image: linear-gradient(to right, $white 85%, transparent)
+    width: 65%
+
+  &__container
+    @extend .container
+    @include desktop-lg
+      align-items: center
+      height: 100%
+      min-height: 35rem
+
+  &__image
+    @extend .image--bg
+    @include tablet
+      position: relative
+      z-index: 1
+      margin-bottom: 4rem
+      margin-left: 0
+      width: 100%
+      height: 30rem
+    @include phone
+      height: 20rem
+    z-index: -1
+    margin-left: 50%
+    // background-position: right
+    width: 50%
+
+  &__column
+
+    &--left
+      @extend .col-6
+
+  &__title
+    @include title-basic-fade-up
+    text-align: left
+
+  &__body
+    padding-bottom: 1rem
+
+    a
+      color: $c1
+      &:hover
+        text-decoration: underline
