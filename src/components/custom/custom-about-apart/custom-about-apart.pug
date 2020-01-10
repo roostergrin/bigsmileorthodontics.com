@@ -1,15 +1,16 @@
 .custom-about-apart
-  h1.custom-about-apart__title(v-html='content.title')
+  .custom-about-apart__title-container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    h1.custom-about-apart__title(v-html='content.title', :class="{ 'custom-about-apart__title--active': active }")
   .custom-about-apart__container
     .custom-about-apart__col
       .custom-about-apart__tile(
-        v-for='(tile, i) in content.column_one'
+        v-for='(tile, i) in content.column_one',
         :key='"tile-" + i')
         h5.custom-about-apart__tile-title(v-html='tile.title')
         .custom-about-apart__tile-body(v-html='tile.body')
     .custom-about-apart__col
       .custom-about-apart__tile(
-        v-for='(tile2, j) in content.column_two'
+        v-for='(tile2, j) in content.column_two',
         :key='"tile2-" + j')
         h5.custom-about-apart__tile-title(v-html='tile2.title')
         .custom-about-apart__tile-body(v-html='tile2.body')
