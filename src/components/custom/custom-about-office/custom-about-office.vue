@@ -1,6 +1,8 @@
 <template lang="pug" src="./custom-about-office.pug"></template>
 
 <script>
+import { onScroll } from '@/resources/mixins'
+
 export default {
   props: {
     content: {
@@ -10,12 +12,18 @@ export default {
   },
   data () {
     return {
-      activeSlide: 0
+      activeSlide: 0,
+      options: {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.5]
+      }
     }
   },
   mounted () {
     this.slideAutomate()
   },
+  mixins: [onScroll],
   methods: {
     slideAutomate () {
       setInterval(() => {
