@@ -1,6 +1,5 @@
 .custom-home-patients
-  .custom-home-patients__patient(v-for='(patient, i) in props.patients',
-    :key='"patient-" + i')
-    BaseLazyImg.custom-home-patients__image(:src='patient.image')
+  router-link.custom-home-patients__patient(v-for='(patient, i) in props.patients',
+    :key='"patient-" + i', :to='patient.link')
+    BaseLazyBg.custom-home-patients__image(:src='patient.image')
     h3.custom-home-patients__title(v-html='patient.title')
-    //- pre {{ patient }}
