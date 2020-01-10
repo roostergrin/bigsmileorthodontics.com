@@ -1,0 +1,94 @@
+.custom-treatments-braces
+  @extend .padding-basic
+  @include tablet
+    padding-top: 0
+    min-height: auto
+  position: relative
+  min-height: 30rem
+
+  &__image-container
+    @include tablet
+
+  &__image
+    @extend .image--bg
+    @include tablet
+      position: relative
+      margin-bottom: 4rem
+      background-position: left
+      width: 100vw
+      height: 30rem
+    @include phone-lg
+      display: none
+    @include phone-land-lg
+      display: none
+      height: 20rem
+    z-index: -1
+
+    &--mobile
+      @include phone-lg
+        display: block
+        background-position: center
+      @include phone-land-lg
+        display: block
+      display: none
+
+  &__container
+    @extend .container
+
+  &__column
+
+    &--right
+      @extend .col-4--offset
+      @extend .col-8
+      @include tablet
+        padding-left: 0
+      padding-left: 3rem
+
+  &__title
+    @include title-basic-fade-up
+    text-align: left
+    color: $c1
+
+  &__titles
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 1rem
+
+  &__subtitle
+    transition: all .25s ease-in
+    margin-right: .5rem
+    margin-bottom: .5rem
+    border-radius: 15px
+    cursor: pointer
+    padding: .25rem .5rem
+    font-weight: 400
+
+    &--active,
+    &:hover
+      border-radius: 15px
+      background-color: $c3
+      color: $white
+
+  &__body-container
+    @include phone-lg
+      height: 18rem
+    @include phone-land
+      height: 15rem
+    position: relative
+    height: 10rem
+
+  &__body
+    position: absolute
+    top: 0
+    left: 0
+    transition: opacity .25s ease-in
+    opacity: 0
+
+    ul
+      margin-top: 0
+      li
+        margin-top: -12px
+
+    &--active
+      transition: opacity .25s ease-in .2s
+      opacity: 1

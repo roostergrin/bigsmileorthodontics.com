@@ -1,0 +1,14 @@
+.custom-treatments-braces
+  BaseLazyBg.custom-treatments-braces__image(:src='props.image')
+  BaseLazyBg.custom-treatments-braces__image.custom-treatments-braces__image--mobile(:src='props.image_mobile')
+  .custom-treatments-braces__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    .custom-treatments-braces__column--right
+      h1.custom-treatments-braces__title(v-html='props.title', :class="{ 'custom-treatments-braces__title--active': active }")
+      .custom-treatments-braces__titles
+        .custom-treatments-braces__subtitles(v-for='(title, i) in props.types',
+          :key='"title-" + i' @click='setTab(i)')
+          h5.custom-treatments-braces__subtitle(v-html='title.title', :class="{ 'custom-treatments-braces__subtitle--active': activeTab === i }")
+      .custom-treatments-braces__body-container
+        .custom-treatments-braces__body(v-for='(body, i) in props.types',
+          :key='"body-" + i', :class="{ 'custom-treatments-braces__body--active': activeTab === i }")
+          .custom-treatments-braces__text(v-html='body.body')
