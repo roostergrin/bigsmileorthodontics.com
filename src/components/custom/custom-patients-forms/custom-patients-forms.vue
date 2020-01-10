@@ -1,21 +1,23 @@
 <template lang="pug" src="./custom-patients-forms.pug"></template>
 
 <script>
+import { onScroll } from '@/resources/mixins'
+
 export default {
   props: {
     props: {
       type: Object
     }
   },
-  computed: {
-    // backgroundImg () {
-    //   const screenIsMobile = window.innerWidth < 1024
-    //   if (screenIsMobile) {
-    //     return this.props.mobile_background_img
-    //   } else {
-    //     return this.props.background_img
-    //   }
-    // }
-  }
+  data () {
+    return {
+      options: {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.5]
+      }
+    }
+  },
+  mixins: [onScroll]
 }
 </script>

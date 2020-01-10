@@ -1,9 +1,7 @@
 .custom-patients-forms
   .custom-patients-forms__container
-    .custom-patients-forms__col
-      .custom-patients-forms__title(v-html="props.title")
+    .custom-patients-forms__col(v-waypoint='{ active: true, callback: onScroll, options: options }')
+      h1.custom-patients-forms__title(v-html="props.title", :class="{ 'custom-patients-forms__title--active': active }")
       .custom-patients-forms__button-row
-        a.custom-patients-forms__button(v-for="button in props.forms" v-html="button.label", :href="button.link")
+        a.custom-patients-forms__button(v-for="button in props.forms" v-html="button.label", :href="button.link" target='_blank')
     .custom-patients-forms__col.custom-patients-forms__col--photo(:style="{'background': 'url(' + props.background_img + ') no-repeat center / cover'}")
-
-

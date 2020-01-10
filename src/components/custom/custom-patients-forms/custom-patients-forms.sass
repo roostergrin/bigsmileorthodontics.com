@@ -6,38 +6,27 @@
     height: 100%
 
   &__col
-    width: 50%
-
     @include tablet
       width: 100%
+    width: 50%
+
 
     &:first-of-type
       display: flex
       flex-direction: column
-      justify-content: center
       align-items: center
+      justify-content: center
 
     &--photo
       @include tablet
         display: none
 
-
   &__title
-    @extend h1
-    text-align: center
+    @include title-basic-fade-up
 
   &__button-row
     display: flex
 
   &__button
-    background-color: $c3
-    color: $white
-    padding: 10px 15px
-    border-radius: 25px
+    @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
     margin: 0 1rem
-
-    &:first-of-type
-      margin-left: 0
-
-    &:last-of-type
-      margin-right: 0
