@@ -7,7 +7,7 @@
   &__container
     @extend .container
     @include desktop
-      min-height: 550px 
+      min-height: 550px
     min-height: 500px
 
   &__background
@@ -26,6 +26,10 @@
       @include phone-lg
         background-position: left
       background-position: 15%
+
+  &__title
+    @include title-basic-fade-up
+    text-align: left
 
   &__content
     @extend .col-6
