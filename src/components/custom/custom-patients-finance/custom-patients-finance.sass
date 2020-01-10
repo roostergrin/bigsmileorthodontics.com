@@ -1,19 +1,25 @@
 .custom-patients-finance
+  @extend .padding-basic
+  position: relative
+  color: $white
 
   &__background
-    height: 40rem
-
+    @extend .image--bg
+    @include tablet-lg
+      background-position: center
     @include tablet
-      height: auto
-      padding: 2rem
+      background-position: center right
+    z-index: -1
+    background-position: center left
 
   &__container
     @extend .container
-    height: 100%
+    @include tablet
+      min-height: auto
+    min-height: 30rem
 
   &__col-small
     @extend .col-4
-
     @include tablet
       display: none
 
@@ -24,8 +30,8 @@
     justify-content: center
 
   &__title
-    @extend h1
-    color: $white
+    @include title-basic-fade-up
+    text-align: left
 
   &__columns
     display: flex
@@ -38,19 +44,13 @@
     &:last-of-type
       margin-bottom: 0
 
-  &__section-title
-    @extend h4
-    color: $white
-
   &__section-content
     color: $white
 
   &__icon
     margin-right: 2rem
 
-    @include tablet
-      display: none
 
     svg
-      height: 50px
       max-width: 57px
+      height: 50px
