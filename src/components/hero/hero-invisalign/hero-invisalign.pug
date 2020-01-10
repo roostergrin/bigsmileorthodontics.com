@@ -1,0 +1,12 @@
+.hero-invisalign(v-if='props')
+  .hero-invisalign__image-container
+    .hero-invisalign__image-mobile(:style="{ backgroundImage: 'url(' + props.image_mobile + ')' }")
+    .hero-invisalign__images(v-for='(image, i) in props.images',
+      :key='"image-" + i')
+      .hero-invisalign__image(:style="{ backgroundImage: 'url(' + image.image + ')' }")
+  .hero-text--pages.hero-invisalign__title(v-html='props.title')
+  .hero-invisalign__card-container
+    .hero-invisalign__card
+      h5.hero-invisalign__card-title(v-html='props.card.title')
+      .hero-invisalign__body(v-html='props.card.body')
+      router-link.hero-invisalign__button(v-html='props.card.button', :to='props.card.button_link')

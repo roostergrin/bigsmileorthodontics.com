@@ -1,0 +1,82 @@
+.hero-invisalign
+  // compensation for desktop-sized navbar
+  @media screen and (min-width: 1431px)
+    padding-top: 152px
+  // compensation for mobile-sized navbar
+  @media screen and (max-width: 1430px)
+    padding-top: 80px
+  position: relative
+
+  &__image-container
+    @media screen and (max-width: 1430px)
+      height: calc(100vh - 80px)
+    display: flex
+    height: calc(100vh - 152px)
+    max-height: 800px
+
+  &__image-mobile
+    @extend .image--bg
+    @include phone-lg
+      display: block
+    display: none
+
+  &__images
+    @include phone-lg
+      display: none
+    position: relative
+    flex-grow: 1
+    height: 100%
+    max-height: 800px
+
+  &__image
+    @extend .image--bg
+
+  &__title
+    @include phone-lg
+      top: calc(100vh - 8rem)
+      transform: translate(-50%, 0)
+    @include phone-land
+      top: calc(100vh - 4rem)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: $white
+
+  &__card-container
+    @include phone-lg
+      position: relative
+      bottom: 0
+      left: 0
+      background-color: $c1
+      padding: 2rem .5rem
+    @include phone-land-lg
+      display: flex
+      position: relative
+      bottom: auto
+      left: auto
+      justify-content: center
+      background-color: $c1
+      padding: 2rem .5rem
+    position: absolute
+    bottom: 2.5rem
+    left: 5vw
+
+  &__card
+    @include phone-land-lg
+      display: inline-block
+    border-radius: 15px
+    background-color: $white
+    padding: 1rem 2rem
+
+  &__card-title
+    color: $c1
+
+  &__body
+    color: $c1
+    font-weight: 600
+
+  &__button
+    @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
+    display: inline-block
+    z-index: 1
