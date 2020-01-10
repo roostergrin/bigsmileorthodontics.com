@@ -1,2 +1,3 @@
-.pages-contact
-  h1 contact
+.pages-contact(v-if='props && contact')
+  HeroPhoto(:props='props.hero')
+  CustomContactPage(:props='props.contact_page', :contact='contact')
