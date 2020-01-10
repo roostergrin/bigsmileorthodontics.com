@@ -1,8 +1,8 @@
 footer.footer(v-if='content')
   .footer__top
     BaseLazyImg.footer__banner-image(
-      v-for='(image, i) in content.footer.logos'
-      :key='"image-" + i'
+      v-for='(image, i) in content.footer.logos',
+      :key='"image-" + i',
       :src='image.logo')
   .footer__bottom
     .footer__container
@@ -23,13 +23,13 @@ footer.footer(v-if='content')
             rel='noreferrer noopener'
             target='_blank'
             v-html='`E: ${content.email}`')
-        .footer__map(v-html='content.google_map')
+        iframe.footer__map(:src='content.google_map')
         .footer__social
-          .footer__social-title Connect with us
+          .footer__social-title(v-html='content.footer.title')
           .footer__social-bar
             a.footer__social-item(
-              v-for='(social, i) in content.social_media'
-              :key='"social-" + i'
+              v-for='(social, i) in content.social_media',
+              :key='"social-" + i',
               :href='social.link'
               rel='noreferrer noopener'
               target='_blank')
