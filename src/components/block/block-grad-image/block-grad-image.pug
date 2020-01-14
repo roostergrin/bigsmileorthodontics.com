@@ -1,4 +1,4 @@
-.block-grad-image
+.block-grad-image(:id='props.id')
   .block-grad-image__overlay--mobile(:style="{ backgroundImage: 'linear-gradient(to right, ' + props.background_color + ' , ' + props.background_color + ')' }")
   .block-grad-image__overlay(:style="{ backgroundImage: 'linear-gradient(to right, ' + props.background_color + ' 85%, transparent)' }")
   .block-grad-image__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
