@@ -13,10 +13,6 @@
 
   &__container
     @extend .container
-    @include desktop-lg
-      align-items: center
-      height: 100%
-      min-height: 35rem
 
   &__image
     @extend .image--bg
@@ -31,13 +27,20 @@
       height: 20rem
     z-index: -1
     margin-left: 50%
-    // background-position: right
+    background-position: top right
     width: 50%
 
   &__column
 
     &--left
       @extend .col-6
+      @include desktop-lg
+        min-height: 30rem
+      @include tablet-lg
+        min-height: auto
+      display: flex
+      align-items: center
+      min-height: 23rem
 
   &__title
     @include title-basic-fade-up
