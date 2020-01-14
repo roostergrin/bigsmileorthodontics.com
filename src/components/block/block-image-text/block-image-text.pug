@@ -1,4 +1,4 @@
-.block-image-text(:class="{ 'block-image-text--light': lightColor, 'block-image-text--reverse': textRight }")
+.block-image-text(:id='props.id', :class="{ 'block-image-text--light': lightColor, 'block-image-text--reverse': textRight }")
   BaseLazyBg.block-image-text__background(:src='props.image')
   .block-image-text__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
     .block-image-text__content
