@@ -9,7 +9,7 @@
         h5.hero-home__title-card(v-html='props.card.title')
         .hero-home__body(v-html='props.card.body')
         .hero-home__details(v-html='props.card.details')
-        a.hero-home__button-card(v-html='props.card.button', :href='props.card.button_link')
+        router-link.hero-home__button-card(v-html='props.card.button', :to='props.card.button_link')
   .hero-home__card-container
     .hero-home__card.hero-home__card--mobile
       h5.hero-home__title-card(v-html='props.card.title')
@@ -22,5 +22,5 @@
       .hero-home__content(:class="{ 'hero-home__content--active': details }")
         .hero-home__body(v-html='props.card.body')
         .hero-home__details(v-html='props.card.details')
-      a.hero-home__button-card(v-html='props.card.button', :href='props.card.button_link')
+      router-link.hero-home__button-card(v-html='props.card.button', :to='props.card.button_link')
         
