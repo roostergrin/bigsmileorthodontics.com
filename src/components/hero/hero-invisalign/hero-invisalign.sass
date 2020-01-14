@@ -8,6 +8,8 @@
   position: relative
 
   &__image-container
+    @include desktop-lg
+      max-height: none
     @media screen and (max-width: 1430px)
       height: calc(100vh - 80px)
     display: flex
@@ -26,7 +28,7 @@
     position: relative
     flex-grow: 1
     height: 100%
-    max-height: 800px
+    // max-height: 800px
 
   &__image
     @extend .image--bg
