@@ -4,7 +4,7 @@
       BaseIcon.navigation-desktop__logo(name='logo--full')
     .navigation-desktop__links
       span(v-for='link in links')
-        router-link.navigation-desktop__link.navigation-text--menu(:to='link.path', v-html='link.name')
+        router-link.navigation-desktop__link.navigation-text--menu(:to='link.path', v-html='link.name', :class="{ 'navigation-desktop__link--active': $route.name === link.name }")
     .navigation-desktop__content
       a.navigation-desktop__phone.navigation-text--buttons(:href='contact.phone_link')
         BaseIcon.navigation-desktop__phone-icon(name='phone')

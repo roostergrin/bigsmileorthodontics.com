@@ -18,7 +18,26 @@
     height: calc(20rem * .25)
 
   &__link
+    position: relative
     padding: 0 1rem
+
+    &:after
+      display: block
+      position: absolute
+      bottom: -5px
+      left: 50%
+      transform: translateX(-50%)
+      transition: width .5s ease
+      border: 2px solid $c1
+      border-width: 0 0 2px
+      width: 0
+      content: ''
+
+    &--active,
+    &:hover
+
+      &:after
+        width: calc(100% - 2rem)
 
   &__content
     display: flex
@@ -31,7 +50,12 @@
   &__phone
     display: flex
     align-items: center
+    transition: all .3s ease-in
     color: $c2
+
+    &:hover
+      .navigation-desktop__phone-text
+        font-weight: 600
 
   &__phone-icon
     display: inline-block
