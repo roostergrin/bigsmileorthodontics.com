@@ -24,6 +24,7 @@
     @include hamburger-basic($c1, .5s, rem-calc(45), rem-calc(45))
     position: relative
     z-index: 9999
+    cursor: pointer
     color: $c1
     font-size: rem-calc(15px)
     font-weight: 600
@@ -82,6 +83,12 @@
     padding: .75rem
     text-align: center
 
+  &__link
+
+    &:hover,
+    &--active
+      text-decoration: underline
+
   &__content
     display: flex
     flex-direction: column
@@ -96,6 +103,9 @@
     display: flex
     align-items: center
     color: $c2
+
+    &:hover
+      font-weight: 600
 
   &__phone-icon
     display: inline-block
@@ -122,6 +132,7 @@
     z-index: -2
     width: 17rem
     height: calc(17rem * .98)
+    fill: $c1
 
     &--open
       opacity: 0.1
