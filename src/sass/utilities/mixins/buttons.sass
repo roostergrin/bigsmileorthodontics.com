@@ -43,7 +43,7 @@
   transition: all 1s ease-in-out
   border: solid $border 2px
   border-radius: rem-calc(50px)
-  background-color: transparent
+  background-color: $background2
   cursor: pointer
   padding: .5rem 1rem
   overflow: hidden
@@ -66,14 +66,9 @@
 
   @media (hover: hover)
     &:hover
-      transition: all .6s ease-in-out
+      transition: all .5s ease-in-out
       box-shadow: 0 2px 4px 0 rgba($black, .33)
-      background-color: $background2
       color: $color2
-
-      span
-        transition: color .6s ease-in-out
 
       &:after
         transform: scale(.01)
-        transition: all .6s ease-in-out
