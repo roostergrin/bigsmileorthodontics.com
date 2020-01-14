@@ -15,11 +15,12 @@
       h1.custom-contact-page__title Email
       a.custom-contact-page__info.custom-contact-page__link(
         v-html='contact.email',
-        :href="'mailto:' + contact.email"
+        :href="'mailto:' + contact.email",
+        target='_blank'
       )
     .custom-contact-page__column--right
       iframe.custom-contact-page__map(:src='contact.google_map')
-  .custom-contact-page__container
+  #form.custom-contact-page__container.custom-contact-page__container--form
     .custom-contact-page__column--form
       .custom-contact-page__form-title(v-html='props.form_title')
       FormContact
