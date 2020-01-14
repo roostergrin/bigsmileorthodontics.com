@@ -10,6 +10,10 @@
     padding-top: 80px
 
   &__background
+    @include desktop-lg
+      max-height: none
+    @include phone-lg
+      display: none
     position: relative
     // background-repeat: no-repeat
     // background-position: left
@@ -20,6 +24,11 @@
 
     @media screen and (max-width: 1430px)
       height: calc(100vh - 80px)
+
+    &--mobile
+      @include phone-lg
+        display: block
+      display: none
 
   &__title
     @extend h1
