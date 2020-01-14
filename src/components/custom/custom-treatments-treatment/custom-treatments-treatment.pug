@@ -1,6 +1,6 @@
 .custom-treatments-treatment
   .custom-treatments-treatment__type(v-for='(type, i) in props.type',
-    :key='"type-" + i', :class="{ 'custom-treatments-treatment__type--reverse': i % 2 }")
+    :key='"type-" + i', :class="{ 'custom-treatments-treatment__type--reverse': i % 2 }", :id='type.id')
     .custom-treatments-treatment__container
       .custom-treatments-treatment__column--left
         BaseLazyImg.custom-treatments-treatment__image(:src='type.image')

@@ -23,6 +23,9 @@
 
   &__column
     &--left
+      @include desktop-lg
+        margin-left: -38rem
+        width: calc(50% + 38rem)
       @include tablet
         margin: 0 -2rem
         width: calc(100% + 4rem)
@@ -34,6 +37,9 @@
       width: calc(50% + 20rem)
 
       .custom-treatments-treatment__type--reverse &
+        @include desktop-lg
+          margin-right: -38rem
+          width: calc(50% + 38rem)
         @include tablet
           margin: 0 -2rem
           width: calc(100% + 4rem)
@@ -74,9 +80,16 @@
   &__body
     ul
       margin: 0
-      li
-        margin: 0
-        margin-top: -18px
+    li
+      list-style: none
+
+      &:before
+        display: inline-block
+        margin-right: .5rem
+        background-image: url('https://bigsmileorthodontics.com/static/Tooth.svg')
+        width: 1rem
+        height: 1rem
+        content: ''
 
   &__button
     @include button-basic--fill-slide($white, $c3, $c3, $white, $c3)
