@@ -1,3 +1,3 @@
-.base-loader(v-if='!loaded', :class="{ 'base-loader--animate': animate }")
+.base-loader(:class="{ 'base-loader--animate': loaded }")
   .base-loader__container
-    BaseIcon.base-loader__icon(name='favicon--loader', :class="{ 'base-loader__icon--animate': animate }")
+    BaseIcon.base-loader__icon(name='favicon--loader', :class="{ 'base-loader__icon--animate': loaded }")
