@@ -29,8 +29,11 @@
     @extend .container
 
   &__col
-    @extend .col-10
-    @extend .col-1--offset
+    @extend .col-8
+    @extend .col-2--offset
+    @include tablet-lg
+      margin-left: 0
+      width: 100%
     @include phone-lg
       flex-direction: column
     display: flex
