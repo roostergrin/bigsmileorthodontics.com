@@ -15,15 +15,15 @@ export default {
     let isLoading = setInterval(() => {
       if (!this.$store.state.loading) {
         setTimeout(() => {
-          console.log('animate')
+          // console.log('animate')
           this.animate = true
         }, 1000)
         setTimeout(() => {
-          console.log('loaded')
+          // console.log('loaded')
           this.loaded = true
           document.body.classList.remove('body-stop')
         }, 1750)
-        console.log('clearing')
+        // console.log('clearing')
         clearInterval(isLoading)
       }
     }, 100)
