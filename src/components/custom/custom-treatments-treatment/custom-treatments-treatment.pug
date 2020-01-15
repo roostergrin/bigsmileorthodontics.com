@@ -1,10 +1,10 @@
 .custom-treatments-treatment
   .custom-treatments-treatment__type(v-for='(type, i) in props.type',
     :key='"type-" + i', :class="{ 'custom-treatments-treatment__type--reverse': i % 2 }", :id='type.id')
-    .custom-treatments-treatment__container
+    .custom-treatments-treatment__container(v-waypoint='{ active: true, callback: onWaypoint, options: options }')
       .custom-treatments-treatment__column--left
         BaseLazyImg.custom-treatments-treatment__image(:src='type.image')
-      .custom-treatments-treatment__column--right(v-waypoint='{ active: true, callback: onWaypoint, options: options }')
+      .custom-treatments-treatment__column--right
           h1.custom-treatments-treatment__title(v-html='type.title')
           .custom-treatments-treatment__provider-container(v-if='type.providers')
             img.custom-treatments-treatment__provider(v-for='(icon, i) in type.providers',

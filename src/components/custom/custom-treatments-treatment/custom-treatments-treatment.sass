@@ -18,6 +18,8 @@
 
   &__title
     @include title-basic-fade-up
+    @include tablet
+      animation-delay: 1.2s
     width: 100%
     text-align: left
 
@@ -63,6 +65,10 @@
 
   &__image
     @extend .image--bg
+    @include image-slide-transition--delay($c11)
+    overflow: hidden
+    .custom-treatments-treatment__type--reverse &
+      @include image-slide-transition--delay($c1--lighten)
 
   &__provider-container
     display: flex

@@ -14,7 +14,7 @@ export default {
       options: {
         root: null,
         rootMargin: '0px',
-        threshold: [0.4]
+        threshold: [0.2]
       }
     }
   },
@@ -22,8 +22,10 @@ export default {
   methods: {
     onWaypoint ({ going, direction, el }) {
       if (going === 'in' && direction === 'top') {
-        const htmlItem = el.children[0]
+        const htmlItem = el.children[1].children[0]
+        const htmlImage = el.children[0].children[0]
         htmlItem.classList.add('custom-treatments-treatment__title--active')
+        htmlImage.classList.add('custom-treatments-treatment__image--active')
       }
     }
   }
