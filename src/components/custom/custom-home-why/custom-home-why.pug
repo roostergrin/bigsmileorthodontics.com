@@ -4,12 +4,14 @@
       .custom-home-why__background
       h1.custom-home-why__title(v-html='props.title', :class="{ 'custom-home-why__title--active': active }")
     .custom-home-why__column--two
-      .custom-home-why__option(v-for='(option, i) in props.column_one',
-      :key='"option-" + i')
+      .custom-home-why__option.custom-home-why__option--one(v-for='(option, i) in props.column_one',
+      :key='"option-" + i',
+      :class="{ 'custom-home-why__option--one--active': active }")
         .custom-home-why__subtitle(v-html='option.subtitle')
         .custom-home-why__body(v-html='option.body')
     .custom-home-why__column--three
-      .custom-home-why__option(v-for='(option, i) in props.column_two',
-      :key='"option-" + i')
+      .custom-home-why__option.custom-home-why__option--two(v-for='(option, i) in props.column_two',
+      :key='"option-" + i',
+      :class="{ 'custom-home-why__option--two--active': active }")
         .custom-home-why__subtitle(v-html='option.subtitle')
         .custom-home-why__body(v-html='option.body')
