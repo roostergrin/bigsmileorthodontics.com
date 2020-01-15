@@ -18,14 +18,57 @@
     @include tablet
       padding: 0 $gutter
     padding: 0 4rem
-    text-align: center
 
   &__tile
     margin-bottom: 1rem
 
+    &--one
+      opacity: 0
+
+      &--active
+        animation: linkFade .9s ease forwards
+        opacity: 0
+
+        @keyframes linkFade
+          0%
+            transform: translateX(50%)
+            opacity: 0
+          50%
+            opacity: .5
+          100%
+            transform: translateX(0)
+            opacity: 1
+
+        @for $i from 1 through 6
+          &:nth-child(#{$i})
+            animation-delay: .8s + (($i - 1) * .1s)
+
+    &--two
+      opacity: 0
+
+      &--active
+        animation: linkFadeTwo .9s ease forwards
+        opacity: 0
+
+        @keyframes linkFadeTwo
+          0%
+            transform: translateX(50%)
+            opacity: 0
+          50%
+            opacity: .5
+          100%
+            transform: translateX(0)
+            opacity: 1
+
+        @for $i from 1 through 6
+          &:nth-child(#{$i})
+            animation-delay: 1.6s + (($i - 1) * .1s)
+
   &__tile-title
     @include tablet
       padding: 0 0 .5rem
-    padding: 0 2rem .5rem
     text-transform: uppercase
     font-weight: bold
+
+  &__tile-body
+    padding-bottom: 1.5rem
