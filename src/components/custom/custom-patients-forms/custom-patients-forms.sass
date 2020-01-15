@@ -1,4 +1,6 @@
 .custom-patients-forms
+  @include tablet
+    height: 20rem
   height: 30rem
 
   &__container
@@ -9,6 +11,7 @@
     @include tablet
       width: 100%
     width: 50%
+    overflow: hidden
 
 
     &:first-of-type
@@ -18,6 +21,7 @@
       justify-content: center
 
     &--photo
+      @include image-slide-transition--delay($c11)
       @include tablet
         display: none
 
