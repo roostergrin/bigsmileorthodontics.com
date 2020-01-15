@@ -2,7 +2,6 @@
   @extend .padding-basic
   position: relative
   background-color: $c7
-  overflow: hidden
 
   &__container
     @extend .container
@@ -173,7 +172,7 @@
 
   &__image
     @extend .image--bg
-    @include image-slide-transition--delay($c8--lighten)
+    @include image-slide-transition--delay($c7--lighten)
     @include desktop-lg
       width: calc(100% + 30rem)
     @include tablet
@@ -184,3 +183,4 @@
     top: -4rem
     width: calc(100% + 16rem)
     height: calc(100% + 8rem)
+    overflow: hidden
