@@ -22,7 +22,7 @@ export default {
           // console.log('loaded')
           this.loaded = true
           document.body.classList.remove('body-stop')
-        }, 1750)
+        }, 900)
         // console.log('clearing')
         clearInterval(isLoading)
       }
