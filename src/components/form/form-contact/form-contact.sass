@@ -187,25 +187,8 @@
 
 
   &__submit-button
-    position: relative
-    transition: transform .25s ease-in, box-shadow .25s ease-in
-    border: none
-    border-radius: 25px
-    background: $c3
-    cursor: pointer
-    padding: 0
-    overflow: hidden
-    color: $white
-
-    &:focus,
-    &:active
-      outline: transparent
-
-    &:hover
-      transform: translateY(-1px)
-      box-shadow: 3px 3px 8px 0 rgba($black, 0.2)
-      // .form-contact__submit-overlay
-      //   opacity: 1
+    @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
+    padding: .25rem
 
   &__modal
     position: fixed
