@@ -38,7 +38,6 @@
     margin-top: 4rem
     margin-left: 50vw
     width: 50vw
-    // border: solid 1px $danger
 
   &__card
     @include phone-lg
@@ -49,11 +48,17 @@
     @include phone-land
       margin: .5rem 0
       width: 100%
+    opacity: 0
     margin: 1rem 0
     border-radius: 15px
     box-shadow: 0 0 10px 0 rgba($black, 0.2)
     background-color: $white
     padding: 1rem 2rem
+
+    &--active
+      animation: fade-in .6s ease-in forwards
+      &:nth-child(2)
+        animation: fade-in .6s ease-in forwards .4s
 
     .block-hero-card__card-container--treatments &
 

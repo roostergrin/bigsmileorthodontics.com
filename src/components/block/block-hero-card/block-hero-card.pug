@@ -1,7 +1,7 @@
 .block-hero-card
   .block-hero-card__card-container(:class="{ 'block-hero-card__card-container--treatments': $route.name.includes('Treatments') }")
     .block-hero-card__card(v-for='(card, i) in props.cards',
-      :key='"card-" + i')
+      :key='"card-" + i', :class="{ 'block-hero-card__card--active': !$store.state.loaded }")
       h5.block-hero-card__card-title(v-html='card.title')
       .block-hero-card__body(v-html='card.body')
       .block-hero-card__button-container
