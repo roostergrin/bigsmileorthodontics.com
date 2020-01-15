@@ -6,8 +6,8 @@
       h1.custom-about-doctor__title(v-html='content.title', :class="{ 'custom-about-doctor__title--active': !$store.state.loaded }")
       .custom-about-doctor__body(v-html='content.body')
     .custom-about-doctor__col-2
-      BaseLazyImg.custom-about-doctor__image-top(:src='content.image_top')
-      BaseLazyImg.custom-about-doctor__image-bottom(:src='content.image_bottom')
+      BaseLazyImg.custom-about-doctor__image-top(:src='content.image_top', :class="{ 'custom-about-doctor__image-top--active': !$store.state.loaded }")
+      BaseLazyImg.custom-about-doctor__image-bottom(:src='content.image_bottom', :class="{ 'custom-about-doctor__image-bottom--active': !$store.state.loaded }")
   .custom-about-doctor__banner
     BaseLazyImg.custom-about-doctor__banner-image(
       v-for='(image, i) in content.banner',

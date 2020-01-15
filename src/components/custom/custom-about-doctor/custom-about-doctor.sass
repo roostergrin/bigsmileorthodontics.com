@@ -44,12 +44,14 @@
       justify-content: space-between
       margin-left: 0
       width: 100%
+    overflow: hidden
 
   &__image-top,
   &__image-bottom
     background: center / cover no-repeat
 
   &__image-top
+    @include image-slide-transition--delay($c6)
     @include tablet-lg
       width: 47.5%
       height: 20rem
@@ -57,14 +59,17 @@
       width: 100%
     margin-bottom: 2rem
     height: calc(60% - 2rem)
+    overflow: hidden
 
   &__image-bottom
+    @include image-slide-transition--delay-two($c6)
     @include tablet-lg
       width: 47.5%
       height: 20rem
     @include phone-lg
       display: none
     height: 40%
+    overflow: hidden
 
   &__banner
     @include phone-lg
