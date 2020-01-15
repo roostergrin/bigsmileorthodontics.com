@@ -1,5 +1,5 @@
-.custom-home-testimonials
-  .custom-home-testimonials__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+.custom-home-testimonials(v-waypoint='{ active: true, callback: onScroll, options: options }')
+  .custom-home-testimonials__container
     .custom-home-testimonials__column--left
       h1.custom-home-testimonials__title(v-html='props.title', :class="{ 'custom-home-testimonials__title--active': active }")
       BaseIcon.custom-home-testimonials__quotes(name='quote')
@@ -19,5 +19,5 @@
           :key='"nav-" + i' @click='setSlide(i)')
           .custom-home-testimonials__circle(:class="{ 'custom-home-testimonials__circle--active': show === i }")
     .custom-home-testimonials__column--right
-      h4.custom-home-testimonials__subtitle(v-html='props.subtitle')
-  BaseLazyBg.custom-home-testimonials__background(:src='props.background')
+      h4.custom-home-testimonials__subtitle(v-html='props.subtitle', :class="{ 'custom-home-testimonials__subtitle--active': active }")
+      BaseLazyBg.custom-home-testimonials__image(:src='props.background', :class="{ 'custom-home-testimonials__image--active': active }")
