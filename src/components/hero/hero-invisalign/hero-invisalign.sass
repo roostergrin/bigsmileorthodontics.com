@@ -67,9 +67,13 @@
   &__card
     @include phone-land-lg
       display: inline-block
+    opacity: 0
     border-radius: 15px
     background-color: $white
     padding: 1rem 2rem
+
+    &--active
+      animation: fade-in .6s ease-in forwards
 
   &__card-title
     color: $c1

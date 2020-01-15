@@ -6,7 +6,7 @@
       .hero-invisalign__image(:style="{ backgroundImage: 'url(' + image.image + ')' }")
   .hero-text--pages.hero-invisalign__title(v-html='props.title')
   .hero-invisalign__card-container
-    .hero-invisalign__card
+    .hero-invisalign__card(:class="{ 'hero-invisalign__card--active': !$store.state.loaded }")
       h5.hero-invisalign__card-title(v-html='props.card.title')
       .hero-invisalign__body(v-html='props.card.body')
       router-link.hero-invisalign__button(v-html='props.card.button', :to='props.card.button_link')

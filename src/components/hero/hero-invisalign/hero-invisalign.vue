@@ -7,15 +7,5 @@ export default {
       type: [Object, Array]
     }
   }
-  // data () {
-  //   return {
-  //     details: false
-  //   }
-  // }
-  // methods: {
-  //   toggleDetails () {
-  //     this.details = !this.details
-  //   }
-  // }
 }
 </script>
