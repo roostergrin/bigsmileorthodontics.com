@@ -29,8 +29,8 @@
     @extend .container
 
   &__col
-    @extend .col-8
-    @extend .col-2--offset
+    @extend .col-10
+    @extend .col-1--offset
     @include tablet-lg
       margin-left: 0
       width: 100%
@@ -64,6 +64,7 @@
     @include phone-land-lg
       width: 30%
     margin: 0 2rem
+    border: solid 1px $c1
     width: calc((100% / 3) - 2rem)
 
   &__link
@@ -88,18 +89,16 @@
     width: 2.5rem
     height: 2.5rem
 
-    &:hover
-      .social-1
-        fill: $c8
-
     &:last-child
       margin-right: 0
 
   &__social-icon
+    transition: fill .25s ease
     width: 100%
     height: 100%
+    fill: $white
     svg
       width: 100%
       height: 100%
-    .social-1
-      transition: fill .25s ease
+    &:hover
+      fill: $c8
