@@ -11,5 +11,10 @@
         .navigation-desktop__phone-text(v-html='contact.phone')
       .navigation-desktop__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
       .navigation-desktop__buttons
-        router-link.navigation-desktop__button--one(v-html='contact.navigation.button_one', :to='contact.navigation.button_one_link')
+        .navigation-desktop__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
         router-link.navigation-desktop__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+  .navigation-desktop__modal-container(:class="{ 'navigation-desktop__modal-container--active': form }")
+    .navigation-desktop__overlay
+    .navigation-desktop__modal
+      .navigation-desktop__close(@click='toggleForm()') Close
+      FormDentist
