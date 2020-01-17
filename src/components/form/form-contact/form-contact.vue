@@ -10,6 +10,7 @@ export default {
       lastName: '',
       clientEmail: '',
       clientPhone: '',
+      clientPromo: '',
       isFirstTime: false,
       firstTimeMessage: 'No, I am not a first time patient',
       clientMessage: '',
@@ -48,6 +49,7 @@ export default {
         lastName: this.lastName,
         clientEmail: this.clientEmail,
         clientPhone: this.clientPhone,
+        clientPromo: this.clientPromo,
         firstTime: this.firstTimeMessage,
         clientMessage: this.clientMessage
       })
@@ -61,6 +63,7 @@ export default {
             this.lastName = ''
             this.clientEmail = ''
             this.clientPhone = ''
+            this.clientPromo = ''
             this.isFirstTime = false
             this.clientMessage = ''
           }, 1000)

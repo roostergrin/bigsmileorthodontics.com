@@ -22,6 +22,10 @@
       .form-contact__error-message(v-show="errors.has('clientPhone')")  Please input a valid number
       
     .form-contact__group
+      input.form-contact__input(name='clientPromo', v-model='clientPromo')
+      label.form-contact__label(:class="{ 'form-contact__label--active': clientPhone }") Promo Code (if applicable)
+      
+    .form-contact__group
       .form-contact__checkbox
         .form-contact__checkbox-group
           input.form-contact__checkbox-input(
