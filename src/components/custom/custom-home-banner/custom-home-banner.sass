@@ -36,12 +36,16 @@
     flex-direction: column
 
   &__button
-    @include button-basic--fill-slide($c3, $c3, $white, transparent, $c3)
+    @include button-basic--fill-slide($c3, $white, $white, $c3, $c3)
     display: inline-flex
     z-index: 0
 
     &:first-child
       margin-bottom: 2rem
+
+    &:hover
+      .custom-home-banner__icon
+        fill: $white
 
   &__button-title
     position: relative
@@ -49,9 +53,11 @@
     padding-top: .25rem
 
   &__icon
+    transition: .25s ease-in
     margin-left: 1rem
     width: 5rem
     height: calc(5rem * .35)
+    fill: $c3
 
   &__image
     @extend .image--bg
