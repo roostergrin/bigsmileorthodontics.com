@@ -18,6 +18,12 @@
           .navigation-mobile__phone-text(v-html='contact.phone')
         .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
         .navigation-mobile__buttons
-          router-link.navigation-mobile__button--one(v-html='contact.navigation.button_one', :to='contact.navigation.button_one_link')
+          .navigation-mobile__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
           router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
     BaseIcon.navigation-mobile__favicon(name='favicon', :class="{ 'navigation-mobile__favicon--open': menu }")
+      
+  .navigation-mobile__modal-container(:class="{ 'navigation-mobile__modal-container--active': form }")
+    .navigation-mobile__modal-overlay
+    .navigation-mobile__modal
+      .navigation-mobile__close(@click='toggleForm()') Close
+      FormDentist
