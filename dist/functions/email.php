@@ -24,7 +24,7 @@ function rg_serve_route () {
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
   $message .= '<div class="container" style="background-color: #ebf5ff; padding: 1.5rem 0;">
-  <div style="padding: 2rem 0; margin: 0 auto;"><img style="width: auto; height: 6rem; display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;" src="https://bigsmileorthodontics.roostertest3.com/wp-content/uploads/logo.png"><h1 style="font-size: 40px; margin: 0; text-align: center; width: 100%; color: #003b75;">Form Received!</h1></div></div>';
+  <div style="padding: 2rem 0; margin: 0 auto;"><img style="width: auto; height: 6rem; display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;" src="https://bigsmileorthodontics.com/wp-content/uploads/logo.png"><h1 style="font-size: 40px; margin: 0; text-align: center; width: 100%; color: #003b75;">Form Received!</h1></div></div>';
   $message .= '<div class="section" style="background-color: #fdfdfd;">';
 
   $message .= '<div class="container" style="padding: 4rem 32px 1rem 32px; max-width: 1440px; margin: 0 auto">';
@@ -110,7 +110,7 @@ function rg_serve_route_dentist () {
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
   $message .= '<div class="container" style="background-color: #ebf5ff; padding: 1.5rem 0;">
-  <div style="padding: 2rem 0; margin: 0 auto;"><img style="width: auto; height: 6rem; display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;" src="https://bigsmileorthodontics.roostertest3.com/wp-content/uploads/logo.png"><h1 style="font-size: 40px; margin: 0; text-align: center; width: 100%; color: #003b75;">Dentist Referral Form Received!</h1></div></div>';
+  <div style="padding: 2rem 0; margin: 0 auto;"><img style="width: auto; height: 6rem; display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;" src="https://bigsmileorthodontics.com/wp-content/uploads/logo.png"><h1 style="font-size: 40px; margin: 0; text-align: center; width: 100%; color: #003b75;">Dentist Referral Form Received!</h1></div></div>';
   $message .= '<div class="section" style="background-color: #fdfdfd;">';
 
   $message .= '<div class="container" style="padding: 4rem 32px 1rem 32px; max-width: 1440px; margin: 0 auto">';
