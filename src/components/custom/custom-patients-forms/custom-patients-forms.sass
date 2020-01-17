@@ -1,6 +1,8 @@
 .custom-patients-forms
   @include tablet
     height: 20rem
+  @include phone-lg
+    height: auto
   height: 30rem
 
   &__container
@@ -8,11 +10,14 @@
     height: 100%
 
   &__col
+    @include tablet-lg
+      padding: 2rem
     @include tablet
       width: 100%
+    padding: 8rem
     width: 50%
-    overflow: hidden
 
+    overflow: hidden
 
     &:first-of-type
       display: flex
@@ -24,13 +29,24 @@
       @include image-slide-transition--delay($c11)
       @include tablet
         display: none
+      overflow: hidden
 
   &__title
     @include title-basic-fade-up
 
+  &__body
+    @include phone-lg
+      padding-bottom: .5rem
+    padding-bottom: 2rem
+    text-align: center
+
   &__button-row
+    @include phone-lg
+      flex-direction: column
     display: flex
 
   &__button
     @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
+    @include phone-lg
+      margin: .5rem 0
     margin: 0 1rem

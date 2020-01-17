@@ -2,6 +2,7 @@
   .custom-patients-forms__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
     .custom-patients-forms__col
       h1.custom-patients-forms__title(v-html="props.title", :class="{ 'custom-patients-forms__title--active': active }")
+      .custom-patients-forms__body(v-html='props.body')
       .custom-patients-forms__button-row
         a.custom-patients-forms__button(v-for="button in props.forms" v-html="button.label", :href="button.link" target='_blank')
     .custom-patients-forms__col.custom-patients-forms__col--photo(:style="{'background': 'url(' + props.background_img + ') no-repeat center / cover'}", :class="{ 'custom-patients-forms__col--photo--active': active }")
