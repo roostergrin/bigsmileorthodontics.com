@@ -1,0 +1,48 @@
+.form-dentist
+  form.form-dentist__form(@submit.prevent='validate', method='post')
+    
+    .form-dentist__group
+      input.form-dentist__input(name='dentistName', v-model='dentistName', v-validate="'required|alpha_spaces'", :class="{ 'form-dentist__input--error': errors.has('dentistName') }", type='text')
+      label.form-dentist__label(:class="{ 'form-dentist__label--active': dentistName }") Referring Dentist Name *
+      .form-dentist__error-message(v-show="errors.has('dentistName')") Your first name is required.
+      
+    .form-dentist__group
+      input.form-dentist__input(name='dentistEmail', v-model='dentistEmail', v-validate="'required|email'", :class="{ 'form-dentist__input--error': errors.has('dentistEmail') }")
+      label.form-dentist__label(:class="{ 'form-dentist__label--active': dentistEmail }") Referring Dentist Email *
+      .form-dentist__error-message(v-show="errors.has('dentistEmail')")  Please input a valid Email
+      
+    .form-dentist__group
+      input.form-dentist__input(name='dentistPhone', v-model='dentistPhone', v-validate="'required|numeric'", :class="{ 'form-dentist__input--error': errors.has('dentistPhone') }")
+      label.form-dentist__label(:class="{ 'form-dentist__label--active': dentistPhone }") Referring Dentist Phone Number *
+      .form-dentist__error-message(v-show="errors.has('dentistPhone')")  Please input a valid number
+    
+    .form-dentist__group
+      input.form-dentist__input(name='clientName', v-model='clientName', v-validate="'required|alpha_spaces'", :class="{ 'form-dentist__input--error': errors.has('clientName') }", type='text')
+      label.form-dentist__label(:class="{ 'form-dentist__label--active': clientName }") Patient Name *
+      .form-dentist__error-message(v-show="errors.has('clientName')") Your name is required.
+    
+    .form-dentist__group
+      input.form-dentist__input(name='clientEmail', v-model='clientEmail', v-validate="'required|email'", :class="{ 'form-dentist__input--error': errors.has('clientEmail') }")
+      label.form-dentist__label(:class="{ 'form-dentist__label--active': clientEmail }") Patient Email Address *
+      .form-dentist__error-message(v-show="errors.has('clientEmail')")  Please input a valid Email
+    
+    .form-dentist__group
+      input.form-dentist__input(name='clientPhone', v-model='clientPhone', v-validate="'required|numeric'", :class="{ 'form-dentist__input--error': errors.has('clientPhone') }")
+      label.form-dentist__label(:class="{ 'form-dentist__label--active': clientPhone }") Patient Phone Number *
+      .form-dentist__error-message(v-show="errors.has('clientPhone')")  Please input a valid number
+
+    
+    .form-dentist__group.form-dentist__group--button
+      .form-dentist__submit-button(:class="{ 'form-dentist__submit-button--success': formSuccess }" @click='validate')
+        .form-dentist__submit-overlay(:class="{ 'form-dentist__submit-overlay--showing': formSubmitted  && !formSuccess }")
+        span.form-dentist__submit-label(:class="{ 'form-dentist__submit-label--hidden': formSuccess }") Submit
+        .form-dentist__submit-success(:class="{ 'form-dentist__submit-success--showing': formSuccess }")
+        span.form-dentist__submit-check(:class="{ 'form-dentist__submit-check--showing': formSuccess }") &#10003
+  
+  .form-dentist__modal(:class="{ 'form-dentist__modal--showing': modalShowing }")
+    .form-dentist__modal-overlay
+    .form-dentist__modal-container
+      .form-dentist__modal-close(@click='closeModal()') close
+      h1.form-dentist__modal-title Thank you!
+      h3.form-dentist__modal-title We will be in touch shortly.
+      slot
