@@ -28,7 +28,14 @@ const router = new VueRouter({
       name: 'About',
       navigation: true,
       mobile: true,
-      component: About
+      component: About,
+      children: [
+        {
+          path: '/about#office',
+          name: 'Our Office',
+          hash: 'office'
+        }
+      ]
     },
     {
       path: '/new-patient',
