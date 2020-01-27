@@ -1,8 +1,9 @@
 .block-grad-image(:id='props.id')
-  .block-grad-image__overlay--mobile(:style="{ backgroundImage: 'linear-gradient(to right, ' + props.background_color + ' , ' + props.background_color + ')' }")
-  .block-grad-image__overlay(:style="{ backgroundImage: 'linear-gradient(to right, ' + props.background_color + ' 85%, transparent)' }")
+  //- .block-grad-image__overlay--mobile(:style="{ backgroundImage: 'linear-gradient(to right, ' + props.background_color + ' , ' + props.background_color + ')' }")
+  //- .block-grad-image__overlay(:style="{ backgroundImage: 'linear-gradient(to right, ' + props.background_color + ' 85%, transparent)' }")
   .block-grad-image__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
     .block-grad-image__column--left
+      //- .block-grad-image__mobile-image(style="backgroundImage: url('d9wgc0splf9g3.cloudfront.net/home/Home-DrAFullcrop.jpeg')")
       h1.block-grad-image__title(v-html='props.title', :class="{ 'block-grad-image__title--active': active }")
       h4.block-grad-image__subtitle(v-html='props.subtitle')
       .block-grad-image__body(v-html='props.body')

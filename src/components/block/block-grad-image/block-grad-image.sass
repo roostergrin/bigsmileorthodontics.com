@@ -2,17 +2,19 @@
   @extend .padding-basic
   position: relative
   color: $white
+  background-image: url('https://bigsmileorthodontics.s3-us-west-1.amazonaws.com/home/Home-DrAFull.jpg')
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  @include tablet
+    background-color: #0ab6d1
+    background-image: none
 
   &__overlay
     @extend .overlay
     @include tablet
       opacity: 0
     width: 62%
-
-    // @media screen and (min-width: 1400px) and (max-width: 1700px)
-    //   width: 82%
-    //
-
 
     &--mobile
       @extend .overlay
@@ -35,12 +37,9 @@
       height: 25rem
     z-index: -1
     margin-left: 53%
-    // background-position: right
     width: 47%
-    //
-    // @media screen and (min-width: 1400px) and (max-width: 1700px)
-    //   width: 30%
-    //   margin-left: 70%
+
+
 
 
   &__container
@@ -49,6 +48,7 @@
       align-items: center
       height: 100%
       min-height: 35rem
+
 
   &__column
 
