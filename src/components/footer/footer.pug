@@ -1,9 +1,9 @@
 footer.footer(v-if='content')
   .footer__top
-    BaseLazyImg.footer__banner-image(
-      v-for='(image, i) in content.footer.logos',
-      :key='"image-" + i',
-      :src='image.logo')
+    a.footer__banner-image-container(v-for='(image, i) in content.footer.logos', :href='image.link' target="_blank")
+      BaseLazyImg.footer__banner-image(
+        :key='"image-" + i',
+        :src='image.logo')
   .footer__bottom
     .footer__container
       .footer__col

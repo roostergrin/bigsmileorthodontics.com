@@ -12,16 +12,25 @@
     background: $c7
     padding: 0 1rem 2rem
 
-  &__banner-image
+  &__banner-image-container
+
     @include phone-lg
       margin: .5rem
       width: calc(50%  - 1.5rem)
       height: 3rem
     @include phone-land-lg
       height: 4rem
+
     flex-grow: 1
     margin: 0 .5rem
     margin-top: 2rem
+    height: 6rem
+
+  &__banner-image
+
+    @include phone-lg
+      height: 3.5rem
+
     background: center / contain no-repeat
     height: 6rem
 
