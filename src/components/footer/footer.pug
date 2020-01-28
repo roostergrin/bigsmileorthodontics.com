@@ -24,6 +24,7 @@ footer.footer(v-if='content')
             target='_blank'
             v-html='`E: ${content.email}`')
         iframe.footer__map(:src='content.google_map')
+        .footer__hipaa-mobile
         .footer__social
           .footer__social-title(v-html='content.footer.title')
           .footer__social-bar
@@ -34,3 +35,4 @@ footer.footer(v-if='content')
               rel='noreferrer noopener'
               target='_blank')
               BaseIcon.footer__social-icon(:name='social.icon')
+          .footer__hipaa-desktop
