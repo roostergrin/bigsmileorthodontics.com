@@ -21,5 +21,11 @@
     try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
     catch(e){window.attachEvent("onload", $buo_f)}
   </script>
+  <script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script>
+  <script type="text/javascript">
+    OpenChair.init({
+      token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJiaWdzbWlsZW9ydGhvZG9udGljcy5jb20iLCJwcmFjdGljZV9pZCI6IjQzOSJ9.4S4Vx0Pc9voobZkRsMHbg6gfIeU-1XNANCvqJ8A1UVc",
+    })
+  </script>
 </body>
 </html>
