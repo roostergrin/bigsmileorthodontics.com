@@ -23,7 +23,8 @@
         .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
         .navigation-mobile__buttons
           .navigation-mobile__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
-          router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+          // router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+          a.navigation-desktop__button--two.openchair-widget(v-html='contact.navigation.button_two')
     BaseIcon.navigation-mobile__favicon(name='favicon', :class="{ 'navigation-mobile__favicon--open': menu }")
       
   .navigation-mobile__modal-container(:class="{ 'navigation-mobile__modal-container--active': form }")
