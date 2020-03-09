@@ -48,13 +48,18 @@
 
   &__subnav
     position: absolute
-    bottom: -4.5rem
+    bottom: -5.5rem
     left: 1rem
     transition: opacity .2s ease-in
     opacity: 0
     box-shadow: 3px 3px 10px 0 rgba($black, 0.3)
     background-color: $white
     padding: 1rem
+    li
+      list-style: none
+      width: 7rem
+    &:last-child
+      bottom: -9rem;
 
   &__link-child
     transition: color .25s ease-in
