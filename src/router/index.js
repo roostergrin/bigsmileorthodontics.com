@@ -6,6 +6,7 @@ import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const Home = () => import('@/pages/home/home')
 const About = () => import('@/pages/about/about')
+const Reviews = () => import('@/pages/reviews/reviews')
 const NewPatient = () => import('@/pages/patient/patient')
 const Invisalign = () => import('@/pages/invisalign/invisalign')
 const Treatments = () => import('@/pages/treatments/treatments')
@@ -24,6 +25,13 @@ const router = new VueRouter({
       component: Home
     },
     {
+      path: '/reviews',
+      name: 'Reviews',
+      navigation: false,
+      mobile: false,
+      component: Reviews
+    },
+    {
       path: '/about',
       name: 'About',
       navigation: true,
@@ -34,6 +42,10 @@ const router = new VueRouter({
           path: '/about#office',
           name: 'Our Office',
           hash: 'office'
+        },
+        {
+          path: '/reviews',
+          name: 'Reviews'
         }
       ]
     },
