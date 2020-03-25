@@ -63,27 +63,49 @@
     @include phone-land-lg
       text-align: left
 
+  //&__subtitle
+  //  @include phone-lg
+  //    padding-top: .5rem
+  //    text-align: left
+  //    line-height: rem-calc(40px)
+  //    font-size: rem-calc(35px)
+  //  @include phone
+  //    line-height: rem-calc(33px)
+  //    font-size: rem-calc(30px)
+  //  @include phone-land-lg
+  //    line-height: rem-calc(33px)
+  //    font-size: rem-calc(30px)
+  //  text-transform: uppercase
+  //  font-size: rem-calc(42px)
+
   &__subtitle
     @include phone-lg
-      padding-top: .5rem
+      //padding-top: .5rem
       text-align: left
-      line-height: rem-calc(40px)
-      font-size: rem-calc(35px)
+      line-height: rem-calc(25px)
+      font-size: rem-calc(24px)
     @include phone
-      line-height: rem-calc(33px)
-      font-size: rem-calc(30px)
+      line-height: rem-calc(18px)
+      font-size: rem-calc(16px)
     @include phone-land-lg
-      line-height: rem-calc(33px)
-      font-size: rem-calc(30px)
+      line-height: rem-calc(21px)
+      font-size: rem-calc(20px)
     text-transform: uppercase
-    font-size: rem-calc(42px)
+    font-size: rem-calc(32px)
+
+  //&__button
+  //  @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
+  //  @include phone-lg
+  //    margin-bottom: 0
+  //  display: inline-block
+  //  margin: 1rem 0
 
   &__button
     @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
     @include phone-lg
       margin-bottom: 0
     display: inline-block
-    margin: 1rem 0
+    margin: 0
 
   &__card-container
     @include phone-lg
@@ -114,7 +136,8 @@
     border-radius: 15px
     box-shadow: 5px 5px 10px 0 rgba($black, 0.5)
     background-color: $white
-    padding: 3rem
+    //padding: 3rem
+    padding: .2rem 2rem
     width: 75%
 
     &--animate
