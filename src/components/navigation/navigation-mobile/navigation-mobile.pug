@@ -1,4 +1,6 @@
 .navigation-mobile(v-if="contact")
+  //.navigation-mobile__covid-banner
+  //  router-link.navigation-mobile__banner-text(to='/covid-19') COVID-19 Update
   .navigation-mobile__container
     router-link.navigation-mobile__logo-container(to='/')
       BaseIcon.navigation-mobile__logo(name='logo--full')
@@ -29,7 +31,7 @@
         .navigation-mobile__subnav(v-for='child in link.children')
           router-link.navigation-mobile__link-child(@click.native='toggleMenu', :to='child.path', v-html='child.name')
     BaseIcon.navigation-mobile__favicon(name='favicon', :class="{ 'navigation-mobile__favicon--open': menu }")
-      
+
   .navigation-mobile__modal-container(:class="{ 'navigation-mobile__modal-container--active': form }")
     .navigation-mobile__modal-overlay
     .navigation-mobile__modal
