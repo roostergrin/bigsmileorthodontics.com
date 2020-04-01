@@ -2,10 +2,22 @@
   .navigation-mobile__container
     router-link.navigation-mobile__logo-container(to='/')
       BaseIcon.navigation-mobile__logo(name='logo--full')
-    .navigation-mobile__hamburger(@click='toggleMenu', :class="{ 'navigation-mobile__hamburger--active': menu }")
-        .navigation-mobile__hamburger--text Menu
-        span
-        span
+    .navigation-mobile__menu-phone-container
+      .navigation-mobile__content
+        .navigation-mobile__content-row
+          a.navigation-mobile__phone.navigation-text--buttons(:href='contact.phone_link')
+            BaseIcon.navigation-mobile__phone-icon(name='phone')
+            .navigation-mobile__phone-text(v-html='contact.phone')
+          .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
+        .navigation-mobile__content-row
+          .navigation-mobile__buttons
+            .navigation-mobile__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
+            // router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+            a.navigation-desktop__button--two.openchair-widget(v-html='contact.navigation.button_two')
+      .navigation-mobile__hamburger(@click='toggleMenu', :class="{ 'navigation-mobile__hamburger--active': menu }")
+          .navigation-mobile__hamburger--text Menu
+          span
+          span
 
   .navigation-mobile__overlay(@click='toggleMenu', :class="{ 'navigation-mobile__overlay--open': menu }")
   .navigation-mobile__drawer(:class="{'navigation-mobile__drawer--open': menu }")
@@ -16,15 +28,6 @@
         router-link.navigation-mobile__link(@click.native='toggleMenu', :to='link.path', v-html='link.name', :class="{ 'navigation-mobile__link--active': $route.name === link.name }")
         .navigation-mobile__subnav(v-for='child in link.children')
           router-link.navigation-mobile__link-child(@click.native='toggleMenu', :to='child.path', v-html='child.name')
-      .navigation-mobile__content
-        a.navigation-mobile__phone.navigation-text--buttons(:href='contact.phone_link')
-          BaseIcon.navigation-mobile__phone-icon(name='phone')
-          .navigation-mobile__phone-text(v-html='contact.phone')
-        .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
-        .navigation-mobile__buttons
-          .navigation-mobile__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
-          // router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
-          a.navigation-desktop__button--two.openchair-widget(v-html='contact.navigation.button_two')
     BaseIcon.navigation-mobile__favicon(name='favicon', :class="{ 'navigation-mobile__favicon--open': menu }")
       
   .navigation-mobile__modal-container(:class="{ 'navigation-mobile__modal-container--active': form }")

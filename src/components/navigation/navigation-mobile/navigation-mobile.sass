@@ -5,7 +5,7 @@
   background-color: $white
   padding: 1rem 0
   width: 100%
-  height: 5rem
+  height: fit-content
 
   &__container
     @extend .container--large
@@ -22,12 +22,17 @@
 
   &__hamburger
     @include hamburger-basic($c1, .5s, rem-calc(45), rem-calc(45))
-    position: relative
+    // position: relative
     z-index: 9999
     cursor: pointer
     color: $c1
     font-size: rem-calc(15px)
     font-weight: 600
+    
+    @media screen and (max-width: 775px)
+      position: absolute
+      top: 0
+      right: 1.5rem
 
     &--text
       transition: opacity .5s ease-in-out
@@ -96,16 +101,61 @@
   &__link-child
     @extend body
     color: $c2
+    font-size: 1.5rem
+
+  &__menu-phone-container
+    display: flex
+    flex-direction: row
+    
+    @media screen and (max-width: 875px)
+      flex-direction: column-reverse
+      align-items: flex-end
+    
+    @media screen and (max-width: 766px)
+      width: 100%
 
   &__content
     display: flex
     flex-direction: column
-    align-items: center
-    padding-top: 2rem
+    align-items: flex-end
+    margin-right: 2rem
+    
+    @media screen and (max-width: 875px)
+      margin-right: 0
+      margin-top: 1rem
+    
+    @media screen and (max-width: 775px)
+      margin-top: 4rem
+      margin-right: 0
+    
+    @media screen and (max-width: 766px)
+      margin-top: 0
+
+    &-row
+      display: flex
+      flex-direction: row
+      width: fit-content
+    
+      @media screen and (max-width: 580px)
+        flex-direction: column
+
+      &:first-child
+        margin-bottom: -1rem
+        margin-top: -1.5rem
+
+        @media screen and (max-width: 766px)
+          margin-top: .5rem
+    
+        @media screen and (max-width: 580px)
+          align-items: flex-end
 
   &__subtitle
-    margin: 1.5rem 0
+    margin: 1.5rem 0 1.5rem 1rem
     text-align: center
+    
+    @media screen and (max-width: 580px)
+      margin-top: 0
+      text-align: right
 
   &__phone
     display: flex
@@ -122,11 +172,13 @@
     height: calc(1.2rem * 1.2)
     fill: $c3
 
-  &__button
+  &__buttons
+    display: flex
+    flex-direction: row
 
+  &__button
     &--one
       @include button-basic--clear-slide($c2, $white, $c2)
-      margin-bottom: 1.5rem
 
     &--two
       @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
