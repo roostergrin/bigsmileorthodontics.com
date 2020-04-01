@@ -1,6 +1,7 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
+import CustomBanner from 'components/custom/custom-banner/custom-banner'
 import TheNavigation from 'components/navigation/navigation'
 import TheFooter from 'components/footer/footer'
 
@@ -12,6 +13,7 @@ export default {
     this.$store.dispatch('SET_SCROLLED', false)
   },
   components: {
+    CustomBanner,
     TheNavigation,
     TheFooter
   }
