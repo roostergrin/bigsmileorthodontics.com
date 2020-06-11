@@ -5,4 +5,5 @@
       h5.block-hero-card__card-title(v-html='card.title')
       .block-hero-card__body(v-html='card.body')
       .block-hero-card__button-container
-        router-link.block-hero-card__button(v-html='card.button', :to='card.button_link')
+        router-link.block-hero-card__button(v-if='card.button !== "Schedule Free Consultation"', v-html='card.button', :to='card.button_link')
+        a.block-hero-card__button.openchair-widget(v-if='card.button === "Schedule Free Consultation"', v-html='card.button')
