@@ -7,6 +7,7 @@ import CustomTreatmentsTypes from 'components/custom/custom-treatments-types/cus
 import CustomTreatmentsDamon from 'components/custom/custom-treatments-damon/custom-treatments-damon'
 import CustomTreatmentsTreatment from 'components/custom/custom-treatments-treatment/custom-treatments-treatment'
 import CustomTreatmentsBraces from 'components/custom/custom-treatments-braces/custom-treatments-braces'
+import CustomTreatmentsPalatal from 'components/custom/custom-treatments-palatal/custom-treatments-palatal'
 import CustomTreatmentsOrtho from 'components/custom/custom-treatments-ortho/custom-treatments-ortho'
 
 export default {
@@ -23,6 +24,7 @@ export default {
     CustomTreatmentsDamon,
     CustomTreatmentsTreatment,
     CustomTreatmentsBraces,
+    CustomTreatmentsPalatal,
     CustomTreatmentsOrtho
   }
 }

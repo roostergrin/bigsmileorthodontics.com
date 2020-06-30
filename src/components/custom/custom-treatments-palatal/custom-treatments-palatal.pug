@@ -1,0 +1,7 @@
+.custom-treatments-palatal(v-if='logProps')
+  .custom-treatments-palatal__overlay
+  BaseLazyBg.custom-treatments-palatal__image(:src='props.image_palatal', :class="{ 'custom-treatments-palatal__image--active': active }")
+  .custom-treatments-palatal__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    h1.custom-treatments-palatal__title(v-html='props.title_palatal', :class="{ 'custom-treatments-palatal__title--active': active }")
+    .custom-treatments-palatal__column--left
+      .custom-treatments-palatal__body(v-html='props.text_palatal')
