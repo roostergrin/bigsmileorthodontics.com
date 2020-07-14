@@ -10,7 +10,7 @@ const Reviews = () => import('@/pages/reviews/reviews')
 const NewPatient = () => import('@/pages/patient/patient')
 const Invisalign = () => import('@/pages/invisalign/invisalign')
 const Treatments = () => import('@/pages/treatments/treatments')
-const Covid = () => import('@/pages/covid/covid')
+// const Covid = () => import('@/pages/covid/covid')
 const Contact = () => import('@/pages/contact/contact')
 
 Vue.use(VueRouter)
@@ -71,13 +71,13 @@ const router = new VueRouter({
       mobile: true,
       component: Treatments
     },
-    {
-      path: '/covid-19',
-      name: 'COVID-19',
-      navigation: true,
-      mobile: true,
-      component: Covid
-    },
+    // {
+    //   path: '/covid-19',
+    //   name: 'COVID-19',
+    //   navigation: true,
+    //   mobile: true,
+    //   component: Covid
+    // },
     {
       path: '/contact-us',
       name: 'Contact Us',
