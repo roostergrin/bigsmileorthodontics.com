@@ -31,5 +31,21 @@
 <?php if (is_page('Home') ):?>
 <script src="https://whyilike.com/review/widget/js/2253/bottom-left/1/popup-widget.js"></script>
 <?php endif; ?>
+<script>
+  let prevScrollpos = window.pageYOffset;
+  let navEl = document.querySelector(".navigation-mobile__content");
+
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      navEl.style.height = "auto";
+      navEl.style.opacity = "1";
+    } else {
+      navEl.style.height = "0";
+      navEl.style.opacity = "0";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
 </body>
 </html>
