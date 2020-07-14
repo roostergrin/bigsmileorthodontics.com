@@ -33,16 +33,15 @@
 <?php endif; ?>
 <script>
   let prevScrollpos = window.pageYOffset;
-  let navEl = document.querySelector(".navigation-mobile__content");
-
+  
   window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      navEl.style.height = "auto";
-      navEl.style.opacity = "1";
+      document.querySelector(".navigation-mobile__content").style.height = "auto";
+      document.querySelector(".navigation-mobile__content").style.opacity = "1";
     } else {
-      navEl.style.height = "0";
-      navEl.style.opacity = "0";
+      document.querySelector(".navigation-mobile__content").style.height = "0";
+      document.querySelector(".navigation-mobile__content").style.opacity = "0";
     }
     prevScrollpos = currentScrollPos;
   }
