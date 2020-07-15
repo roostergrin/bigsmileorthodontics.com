@@ -31,20 +31,5 @@
 <?php if (is_page('Home') ):?>
 <script src="https://whyilike.com/review/widget/js/2253/bottom-left/1/popup-widget.js"></script>
 <?php endif; ?>
-<script>
-  let prevScrollpos = window.pageYOffset;
-  
-  window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.querySelector(".navigation-mobile__content").style.height = "auto";
-      document.querySelector(".navigation-mobile__content").style.opacity = "1";
-    } else {
-      document.querySelector(".navigation-mobile__content").style.height = "0";
-      document.querySelector(".navigation-mobile__content").style.opacity = "0";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-</script>
 </body>
 </html>
