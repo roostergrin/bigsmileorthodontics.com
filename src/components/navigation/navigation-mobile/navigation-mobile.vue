@@ -23,7 +23,6 @@ export default {
   },
   computed: {
     contact () {
-      console.log(this.scrolling)
       return this.$store.state.app['contact-information']
     }
   },
@@ -45,28 +44,7 @@ export default {
       } else {
         document.body.classList.remove('body-stop')
       }
-    },
-    handleScroll () {
-      let prevScrollPos = window.pageYOffset
-
-      window.onscroll = () => {
-        let currentScrollPos = window.pageYOffset
-        if (prevScrollPos > currentScrollPos) {
-          document.querySelector('.navigation-mobile__content').style.height = 'auto'
-          document.querySelector('.navigation-mobile__content').style.opacity = '1'
-        } else {
-          document.querySelector('.navigation-mobile__content').style.height = '0'
-          document.querySelector('.navigation-mobile__content').style.opacity = '0'
-        }
-        prevScrollPos = currentScrollPos
-      }
     }
-  },
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.handleScroll)
   },
   components: {
     FormDentist
