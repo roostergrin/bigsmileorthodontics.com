@@ -56,8 +56,8 @@ export default {
         .then(res => {
           this.formSuccess = true
           setTimeout(() => {
-            this.modalShowing = true
-          }, 750)
+            window.location.href = 'https://bigsmileorthodontics.com/thank-you'
+          }, 500)
           setTimeout(() => {
             this.firstName = ''
             this.lastName = ''

@@ -4,8 +4,42 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+
+<!-- Global site tag (gtag.js) - Google Ads: 663098293 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-663098293"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-663098293');
+</script>
+
+<script>
+  gtag('config', 'AW-663098293/G4alCIaax9gBELWnmLwC', {
+    'phone_conversion_number': '512-828-7900'
+  });
+</script>
+
 </head>
 <body>
+
+<?php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  if($actual_link=='https://bigsmileorthodontics.com/thank-you/'){ ?>
+<!-- Event snippet for website_form_conv conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-663098293/f5CDCMPuuNgBELWnmLwC'});
+</script>
+<?php  } ?> 
+
+<?php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  if($actual_link=='https://bigsmileorthodontics.com/thank-you'){ ?>
+<!-- Event snippet for website_form_conv conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-663098293/f5CDCMPuuNgBELWnmLwC'});
+</script>
+
+<?php  } ?>  
   <div id='app' role='application'></div>
   <?php wp_footer(); ?>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOqNHJ0YR4fsuLjbMFe1OciIJ9B4wEgPg" async defer></script>
