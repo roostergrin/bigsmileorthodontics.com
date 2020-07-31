@@ -56,6 +56,9 @@
           span.form-contact__checkbox-overlay
           label.form-contact__checkbox-label E-mail
 
+    .form-contact__group
+      input.form-contact__input(name='bestTimeContact', v-model='bestTimeContact')
+      label.form-contact__label(:class="{ 'form-contact__label--active': clientPhone }") Best times for contact
 
     
     .form-contact__group

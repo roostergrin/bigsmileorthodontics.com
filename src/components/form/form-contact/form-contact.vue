@@ -14,6 +14,7 @@ export default {
       isFirstTime: false,
       firstTimeMessage: 'No, I am not a first time patient',
       bestWayContact: '',
+      bestTimeContact: '',
       clientMessage: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
@@ -63,6 +64,7 @@ export default {
         clientPromo: this.clientPromo,
         firstTime: this.firstTimeMessage,
         bestWayContact: this.bestWayContact,
+        bestTimeContact: this.bestTimeContact,
         clientMessage: this.clientMessage
       })
         .then(res => {
@@ -78,6 +80,7 @@ export default {
             this.clientPromo = ''
             this.isFirstTime = false
             this.bestWayContact = ''
+            this.bestTimeContact = ''
             this.clientMessage = ''
           }, 1000)
           setTimeout(() => {
