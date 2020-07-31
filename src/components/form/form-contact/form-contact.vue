@@ -13,6 +13,7 @@ export default {
       clientPromo: '',
       isFirstTime: false,
       firstTimeMessage: 'No, I am not a first time patient',
+      bestWayContact: '',
       clientMessage: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
@@ -44,6 +45,16 @@ export default {
       if (this.isFirstTime) {
         this.firstTimeMessage = 'Yes, I am a first time patient'
       }
+      if (this.cellContact && this.emailContact) {
+        this.bestWayContact = 'Cellphone and e-mail'
+      }
+      if (this.cellContact) {
+        this.bestWayContact = 'Cellphone'
+      }
+      if (this.emailContact) {
+        this.bestWayContact = 'E-mail'
+      }
+
       axios.post(this.postUrl, {
         firstName: this.firstName,
         lastName: this.lastName,
@@ -51,6 +62,7 @@ export default {
         clientPhone: this.clientPhone,
         clientPromo: this.clientPromo,
         firstTime: this.firstTimeMessage,
+        bestWayContact: this.bestWayContact,
         clientMessage: this.clientMessage
       })
         .then(res => {
@@ -65,6 +77,7 @@ export default {
             this.clientPhone = ''
             this.clientPromo = ''
             this.isFirstTime = false
+            this.bestWayContact = ''
             this.clientMessage = ''
           }, 1000)
           setTimeout(() => {

@@ -55,6 +55,12 @@ function rg_serve_route () {
   $message .= '<td style="width: 50%; font-size: 20px;"><h5 style="margin-top: 0; padding-top: 0; font-weight: 300; border-bottom: 1px solid #3f3f3f; margin-right: 10%;">' . $data['firstTime'] . '</h5></td>';
   $message .= '</tr></table>';
 
+  $message .= '<table style="width: 50%; text-align: left"><tr>';
+  $message .= '<th><p style="font-size: 14px; margin-bottom: .5rem; color: #848484; font-weight: 300;">Best way to contact</p></th>';
+  $message .= '</tr><tr>';
+  $message .= '<td style="width: 100%; font-size: 20px;"><h5 style="margin-top: 0; padding-top: 0; font-weight: 300; border-bottom: 1px solid #3f3f3f; margin-right: 10%;">' . $data['bestWayContact'] . '</h5></td>';
+  $message .= '</tr></table>';
+
   $message .= '<table style="width: 100%; text-align: left"><tr>';
   $message .= '<th><p style="font-size: 14px; margin-bottom: .5rem; color: #848484; font-weight: 300;">Message</p></th>';
   $message .= '</tr><tr>';

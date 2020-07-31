@@ -35,6 +35,28 @@
             type='checkbox')
           span.form-contact__checkbox-overlay
           label.form-contact__checkbox-label Yes, I am a first time patient!
+
+    .form-contact__group
+      .form-contact__checkbox
+        label.form-contact__checkbox(:class="{ 'form-contact__label--active': clientPhone }") Best way to contact you
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='cellContact'
+            v-model='cellContact'
+            value='Cellphone'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Cellphone
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='emailContact'
+            v-model='emailContact'
+            value='E-mail'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label E-mail
+
+
     
     .form-contact__group
       textarea.form-contact__input.form-contact__input--textarea(name='clientMessage', v-model='clientMessage')
