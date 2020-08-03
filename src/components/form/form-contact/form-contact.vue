@@ -102,9 +102,9 @@ export default {
       })
         .then(res => {
           this.formSuccess = true
-          // setTimeout(() => {
-          //   window.location.href = 'https://bigsmileorthodontics.com/thank-you'
-          // }, 500)
+          setTimeout(() => {
+            window.location.href = 'https://bigsmileorthodontics.com/thank-you'
+          }, 500)
           setTimeout(() => {
             this.firstName = ''
             this.lastName = ''
