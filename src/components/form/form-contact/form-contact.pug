@@ -35,6 +35,77 @@
             type='checkbox')
           span.form-contact__checkbox-overlay
           label.form-contact__checkbox-label Yes, I am a first time patient!
+
+    .form-contact__group
+      .form-contact__checkbox
+        label.form-contact__checkbox(:class="{ 'form-contact__label--active': clientPhone }") Best way to contact you
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='cellContact'
+            v-model='cellContact'
+            value='Cellphone'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Cellphone
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='emailContact'
+            v-model='emailContact'
+            value='E-mail'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label E-mail
+
+    .form-contact__group
+      input.form-contact__input(name='bestTimeContact', v-model='bestTimeContact')
+      label.form-contact__label(:class="{ 'form-contact__label--active': clientPhone }") Best times for contact
+
+    .form-contact__group
+      .form-contact__checkbox-treatments
+        label.form-contact__checkbox(:class="{ 'form-contact__label--active': clientPhone }") Type/s of treatment interested in: 
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='braces'
+            v-model='braces'
+            value='Braces'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Braces
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='invisalign'
+            v-model='invisalign'
+            value='Invisalign'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Invisalign
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='retainer'
+            v-model='retainer'
+            value='Retainer'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Retainer
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='expander'
+            v-model='expander'
+            value='Expander'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Expander
+        .form-contact__checkbox-group
+          input.form-contact__checkbox-input(
+            name='sleepApnea'
+            v-model='sleepApnea'
+            value='Sleep Apnea Device'
+            type='checkbox')
+          span.form-contact__checkbox-overlay
+          label.form-contact__checkbox-label Sleep Apnea Advice
+        .form-contact__checkbox-group
+          input.form-contact__input(name='otherTreatment', v-model='otherTreatment')
+          label.form-contact__label(:class="{ 'form-contact__label--active': clientPhone }") Other treatment
     
     .form-contact__group
       textarea.form-contact__input.form-contact__input--textarea(name='clientMessage', v-model='clientMessage')

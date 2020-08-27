@@ -1,0 +1,6 @@
+.pages-contact(v-if='props')
+  HeroPhoto(:props='props.hero')
+  .custom-contact-page
+    h1.text-centerr(v-html='props.title')
+    .thankucontent.text-centerr(v-html='props.thank_you_message')
+  CustomContactPage(:props='props.contact_page', :contact='contact')

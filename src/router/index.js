@@ -12,6 +12,7 @@ const Invisalign = () => import('@/pages/invisalign/invisalign')
 const Treatments = () => import('@/pages/treatments/treatments')
 const Covid = () => import('@/pages/covid/covid')
 const Contact = () => import('@/pages/contact/contact')
+const ThankYou = () => import('@/pages/thank-you/thank-you')
 
 Vue.use(VueRouter)
 
@@ -84,6 +85,13 @@ const router = new VueRouter({
       navigation: true,
       mobile: true,
       component: Contact
+    },
+    {
+      path: '/thank-you',
+      name: 'Thank You',
+      navigation: false,
+      mobile: false,
+      component: ThankYou
     },
     {
       path: '/style-guide',
