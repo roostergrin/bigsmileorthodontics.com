@@ -1,6 +1,7 @@
 <template lang="pug" src="./covid.pug"></template>
 
 <script>
+import HeroPhoto from '@/components/block/block-hero-photo/block-hero-photo'
 import CustomCovidContent from 'components/custom/custom-covid-content/custom-covid-content'
 
 export default {
@@ -11,6 +12,7 @@ export default {
     }
   },
   components: {
+    HeroPhoto,
     CustomCovidContent
   }
 }
