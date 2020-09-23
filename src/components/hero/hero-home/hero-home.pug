@@ -8,13 +8,13 @@
       //-a.hero-home__button(v-if='props.subtitle_2', v-html='props.button_2', :href='props.button_2_link', target='_blank')
       .hero-home__title.hero-text--home(v-html='props.title')
       .hero-home__card(:class="{ 'hero-home__card--animate': !$store.state.loaded }")
-        h5.hero-home__title-card(v-html='props.card.title')
+        h4.hero-home__title-card(v-html='props.card.title')
         .hero-home__body(v-html='props.card.body')
         .hero-home__details(v-html='props.card.details')
         router-link.hero-home__button-card(v-html='props.card.button', :to='props.card.button_link')
   .hero-home__card-container
     .hero-home__card.hero-home__card--mobile(:class="{ 'hero-home__card--animate': !$store.state.loaded }")
-      h5.hero-home__title-card(v-html='props.card.title')
+      h4.hero-home__title-card(v-html='props.card.title')
       .hero-home__button-container
         BaseIcon.hero-home__icon(name='chevron_02')
         .hero-home__button-details(
