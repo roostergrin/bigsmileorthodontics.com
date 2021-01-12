@@ -60,8 +60,10 @@
   &__title
     @include phone-lg
       text-align: left
+      font-size: 2rem
     @include phone-land-lg
       text-align: left
+      font-size: 2rem
 
   //&__subtitle
   //  @include phone-lg
@@ -83,15 +85,15 @@
       //padding-top: .5rem
       text-align: left
       line-height: rem-calc(20px)
-      font-size: rem-calc(20px)
+      font-size: rem-calc(16px)
     @include phone
       line-height: rem-calc(16px)
-      font-size: rem-calc(14px)
+      font-size: rem-calc(11px)
     @include phone-land-lg
       line-height: rem-calc(18px)
-      font-size: rem-calc(18px)
+      font-size: rem-calc(16px)
     // text-transform: uppercase
-    font-size: rem-calc(24px)
+    font-size: rem-calc(20px)
 
   //&__button
   //  @include button-basic--fill-slide($white, $c3, $c3, transparent, $c3)
@@ -187,12 +189,9 @@
 
   &__details
     @include phone-lg
-      margin-left: 5%
       width: 90%
     @include phone-land-lg
-      margin-left: 5%
       width: 90%
-    margin-left: 15%
     padding: 1rem 0
     width: 80%
     text-align: left

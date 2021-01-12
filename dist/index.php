@@ -65,7 +65,7 @@
 <?php if (is_page('Home') ):?>
 <script src="https://whyilike.com/review/widget/js/2253/bottom-left/1/popup-widget.js"></script>
 <?php endif; ?>
-<script>
+<!-- <script>
 let prevScrollpos = window.pageYOffset;
   
   window.onscroll = function() {
@@ -79,7 +79,7 @@ let prevScrollpos = window.pageYOffset;
     }
     prevScrollpos = currentScrollPos;
   }
-</script>
+</script> -->
 <script>
 window.rubyApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};
 (function(){
