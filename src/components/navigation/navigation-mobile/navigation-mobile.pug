@@ -7,14 +7,15 @@
     .navigation-mobile__menu-phone-container
       .navigation-mobile__content
         .navigation-mobile__content-row
+          .navigation-mobile__buttons
+            //- .navigation-mobile__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
+            router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+        .navigation-mobile__content-row
           a.navigation-mobile__phone.navigation-text--buttons(:href='contact.phone_link')
             BaseIcon.navigation-mobile__phone-icon(name='phone')
             .navigation-mobile__phone-text(v-html='contact.phone')
-          .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
-        .navigation-mobile__content-row
-          .navigation-mobile__buttons
-            .navigation-mobile__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
-            router-link.navigation-mobile__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
+          //- .navigation-mobile__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
+        
       .navigation-mobile__hamburger(@click='toggleMenu', :class="{ 'navigation-mobile__hamburger--active': menu }")
           .navigation-mobile__hamburger--text Menu
           span
