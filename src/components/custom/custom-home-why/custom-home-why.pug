@@ -1,6 +1,6 @@
 .custom-home-why
   h1.custom-home-why__title(v-html='props.title', :class="{ 'custom-home-why__title--active': active }")
-  .custom-home-why__container
+  .custom-home-why__container(v-waypoint='{ active: true, callback: onScroll, options: options }')
     //- .custom-home-why__column--one(v-waypoint='{ active: true, callback: onScroll, options: options }')
     //-   .custom-home-why__background
     .custom-home-why__column--two
