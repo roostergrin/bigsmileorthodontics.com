@@ -1,8 +1,8 @@
 .custom-home-why
+  h1.custom-home-why__title(v-html='props.title', :class="{ 'custom-home-why__title--active': active }")
   .custom-home-why__container
-    .custom-home-why__column--one(v-waypoint='{ active: true, callback: onScroll, options: options }')
-      .custom-home-why__background
-      h1.custom-home-why__title(v-html='props.title', :class="{ 'custom-home-why__title--active': active }")
+    //- .custom-home-why__column--one(v-waypoint='{ active: true, callback: onScroll, options: options }')
+    //-   .custom-home-why__background
     .custom-home-why__column--two
       .custom-home-why__option.custom-home-why__option--one(v-for='(option, i) in props.column_one',
       :key='"option-" + i',

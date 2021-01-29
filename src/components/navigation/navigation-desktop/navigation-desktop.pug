@@ -15,7 +15,7 @@
         BaseIcon.navigation-desktop__phone-icon(name='phone')
         .navigation-desktop__phone-text(v-html='contact.phone')
       .navigation-desktop__buttons
-        .navigation-desktop__button--one(v-html='contact.navigation.button_one' @click='toggleForm()')
+        .navigation-desktop__button--one.openchair-widget(v-html='contact.navigation.button_one')
         router-link.navigation-desktop__button--two(v-html='contact.navigation.button_two', :to='contact.navigation.button_two_link')
       .navigation-desktop__subtitle.navigation-text--menu(v-html='contact.navigation.subtitle')
   .navigation-desktop__modal-container(:class="{ 'navigation-desktop__modal-container--active': form }")
