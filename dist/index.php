@@ -56,12 +56,15 @@
     catch(e){window.attachEvent("onload", $buo_f)}
   </script>
   <script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   OpenChair.init({
     token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJiaWdzbWlsZW9ydGhvZG9udGljcy5jb20iLCJwcmFjdGljZV9pZCI6IjQzOSJ9.4S4Vx0Pc9voobZkRsMHbg6gfIeU-1XNANCvqJ8A1UVc",
     hideMainButton: true,
   })
-</script>
+</script> -->
+
+<script src="https://onlineschedulingv2.threadcommunication.com" type="text/javascript"></script><script type="text/javascript">  OpenChair.init({    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmlnaW4iOiJiaWdzbWlsZW9ydGhvZG9udGljcy5jb20iLCJwcmFjdGljZV9pZCI6IjQzOSJ9.4S4Vx0Pc9voobZkRsMHbg6gfIeU-1XNANCvqJ8A1UVc",    extraQuestion: {      question: "Do you have dental insurance?",      keyname: "has_insurance",      option1: "Yes",      option2: "No"    }  })</script>
+
 <?php if (is_page('Home') ):?>
 <script src="https://whyilike.com/review/widget/js/2253/bottom-left/1/popup-widget.js"></script>
 <?php endif; ?>
