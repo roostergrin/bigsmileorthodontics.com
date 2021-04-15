@@ -109,6 +109,15 @@
     display: inline-block
     margin: 0
 
+  &__cards
+    @include tablet
+      flex-direction: column
+    @include phone-lg
+      flex-direction: column
+    padding-top: 1rem 
+    display: flex
+
+
   &__card-container
     @include phone-lg
       display: block
@@ -141,6 +150,7 @@
     //padding: 3rem
     padding: .2rem 2rem
     width: 75%
+    
 
     &--animate
       animation: fade-in .6s ease-in forwards
