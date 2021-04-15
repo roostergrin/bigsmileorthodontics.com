@@ -8,7 +8,7 @@
       //- .hero-home__subtitle.hero-text--home(v-if='props.subtitle_2', v-html='props.subtitle_2')
       //-a.hero-home__button(v-if='props.subtitle_2', v-html='props.button_2', :href='props.button_2_link', target='_blank')
       .hero-home__cards
-        .hero-home__card(:class="{ 'hero-home__card--animate': !$store.state.loaded }" style=" margin-left:0;")
+        .hero-home__card(:class="{ 'hero-home__card--animate': !$store.state.loaded }")
           h4.hero-home__title-card(v-html='props.card.title')
           .hero-home__body(v-html='props.card.body')
           .hero-home__details(v-html='props.card.details')
