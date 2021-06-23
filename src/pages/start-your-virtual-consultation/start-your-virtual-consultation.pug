@@ -1,0 +1,21 @@
+.pages-contact(v-if='props')
+  HeroPhoto(:props='props.hero')
+  .virtualintro
+    .virtualwrap
+      .vitrualintro_desc(v-if='props.virtual_intro' v-html:p='props.virtual_intro')
+  .virtualwork
+    .virtualwrap   
+      h2(v-if='props.hot_it_works_title' v-html:p='props.hot_it_works_title')
+      .workdesc(v-if='props.hot_it_works_content' v-html:p='props.hot_it_works_content')
+  .virtualimglist
+    .virtualwrap
+      .virtualitem_outer.clearfix(v-if='props.virtual_list')
+        .virtual_item(v-for='virtualSmile in props.virtual_list') 
+          h2(v-html:p='virtualSmile.title')
+          img(v-bind:src='virtualSmile.img_url' alt='')   
+          .vir_desc(v-html:p='virtualSmile.desc')
+  .virtualform
+    .virtualwrap
+      h2(v-if='props.virtual_contact_title' v-html:p='props.virtual_contact_title')   
+      FormVirtual  
+               

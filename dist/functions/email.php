@@ -10,6 +10,10 @@ function rg_register_routes () {
     'methods' => WP_REST_Server::CREATABLE,
     'callback' => 'rg_serve_route_dentist'
   ));
+  register_rest_route('rg-mail/v1', 'virtualform', array(
+    'methods' => WP_REST_Server::CREATABLE,
+    'callback' => 'rg_serve_route_virtual'
+  ));  
 }
 // function for handling post request to new api route
 function rg_serve_route () {
@@ -171,6 +175,65 @@ function rg_serve_route_dentist () {
 
   $charset_collate = $wpdb->get_charset_collate();
 
+  $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+    `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+    `email` text NOT NULL,
+    `message` text NOT NULL,
+    UNIQUE (`id`)
+  ) $charset_collate;";
+
+  require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+  dbDelta( $sql );
+
+  $wpdb->insert($table_name, array(
+    'email' => (string)$data['email'],
+    'message' => (string)$message
+  ));
+
+  $sent_message = wp_mail($to, $subject, $message, $headers);
+
+  if ($sent_message) {
+    echo 'Email has been received!';
+  } else {
+    echo 'Could not send email.';
+  }
+}
+
+// function for handling post request to new api route
+function rg_serve_route_virtual () {
+  require('wp-load.php');
+
+  global $wpdb;
+
+  $data = json_decode(file_get_contents("php://input"), true);
+  $from = 'info@wordpress.com';
+  $to = 'info@bigsmileorthodontics.com';
+  $subject = 'Bigsmileorthodontics.com - Virtual Smile Form';
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+  $message = '<html><body>';
+  $message .= '<p><h4><strong>I am 18 years or older:</strong></h4> ' . $data['eighteenOlder'] . '</p>';
+  $message .= '<p><h4><strong>First Name:</strong></h4> ' . $data['firstName'] . '</p>';
+  $message .= '<p><h4><strong>Last Name:</strong></h4> ' . $data['lastName'] . '</p>'; 
+  $message .= '<p><h4><strong>Email Address:</strong></h4> ' . $data['clientEmail'] . '</p>';
+  $message .= '<p><h4><strong>Phone Number:</strong></h4> ' . $data['clientPhone'] . '</p>';
+  $message .= '<p><h4><strong>Date Of Birth:</strong></h4> ' . $data['patientBirthday'] . '</p>';
+  $message .= '<p><h4><strong>Do you have dental insurance:</strong></h4> ' . $data['clientInsure'] . '</p>';
+  $message .= '<p><h4><strong>Type of treatment preferred: </strong></h4> ' . $data['treatments'] . '</p>';
+  $message .= '<p><h4><strong>What is the main concern about your smile ?  </strong></h4> ' . $data['mainConcern'] . '</p>';  
+  $message .= '<h4><strong>Attachment Photos:</strong></h4> ';
+   for ($x = 0; $x <= 19; $x++) {
+        $image_list = $x + 1;
+    if($data['attachment'][$x] !=''){
+      $message .= '<p><a href="' . $data['attachment'][$x] . '" target="_blank">Attachment ' . $image_list . '</p>';
+}
+    }
+  $message .= '</body></html>';
+
+  $table_name = $wpdb->prefix . 'emails';
+
+  $charset_collate = $wpdb->get_charset_collate();
+  
   $sql = "CREATE TABLE IF NOT EXISTS $table_name (
     `id` mediumint(9) NOT NULL AUTO_INCREMENT,
     `email` text NOT NULL,

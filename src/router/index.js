@@ -12,6 +12,7 @@ const Invisalign = () => import('@/pages/invisalign/invisalign')
 const Treatments = () => import('@/pages/treatments/treatments')
 const Covid = () => import('@/pages/covid/covid')
 const Contact = () => import('@/pages/contact/contact')
+const StartYourVirtualConsultation = () => import('@/pages/start-your-virtual-consultation/start-your-virtual-consultation')
 const ThankYou = () => import('@/pages/thank-you/thank-you')
 
 Vue.use(VueRouter)
@@ -85,6 +86,13 @@ const router = new VueRouter({
       navigation: true,
       mobile: true,
       component: Contact
+    },
+    {
+      path: '/start-your-virtual-consultation',
+      name: 'Start Your Virtual Consultation',
+      navigation: true,
+      mobile: true,
+      component: StartYourVirtualConsultation
     },
     {
       path: '/thank-you',
